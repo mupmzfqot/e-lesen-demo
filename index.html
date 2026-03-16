@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log Masuk — e-Lesen MPOB</title>
+    <script type="module" crossorigin src="/assets/index-CZ6u3cC4.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DVxhkbHg.css">
+  </head>
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <!-- Login page has NO sidebar/header — standalone layout -->
+    <div class="flex min-h-screen flex-col items-center justify-center px-4 py-12">
+      <!-- Logo & Title -->
+      <div class="mb-8 text-center">
+        <img
+          src="/assets/logo-DwfCtdk6.png"
+          alt="MPOB Logo"
+          class="mx-auto mb-4 h-16 w-16 object-contain"
+        />
+        <h1 class="text-2xl font-bold text-gray-900 dark:text-white">e-Lesen MPOB</h1>
+        <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+          Sistem Pelesenan Lembaga Minyak Sawit Malaysia
+        </p>
+      </div>
+
+      <!-- Login Card -->
+      <div
+        class="w-full max-w-md rounded-xl border border-gray-200 bg-white p-8 shadow-sm dark:border-gray-700 dark:bg-gray-900"
+      >
+        <h2 class="mb-6 text-lg font-semibold text-gray-900 dark:text-white">Log Masuk</h2>
+
+        <form class="space-y-5" onsubmit="return false">
+          <!-- Email / ID -->
+          <div>
+            <label for="email" class="form-label">Emel / ID Pengguna</label>
+            <div class="relative">
+              <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+                <i data-lucide="mail" class="h-4 w-4"></i>
+              </span>
+              <input
+                type="email"
+                id="email"
+                class="form-input pl-10"
+                placeholder="nama@contoh.com"
+              />
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div>
+            <label for="password" class="form-label">Kata Laluan</label>
+            <div class="relative">
+              <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+                <i data-lucide="lock" class="h-4 w-4"></i>
+              </span>
+              <input
+                type="password"
+                id="password"
+                class="form-input pl-10"
+                placeholder="Masukkan kata laluan"
+              />
+            </div>
+          </div>
+
+          <!-- Remember + Forgot -->
+          <div class="flex items-center justify-between">
+            <label class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+              <input
+                type="checkbox"
+                class="rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+              />
+              Ingat saya
+            </label>
+            <a
+              href="#"
+              class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+            >
+              Lupa kata laluan?
+            </a>
+          </div>
+
+          <!-- Submit -->
+          <button
+            type="submit"
+            class="btn-primary w-full"
+            onclick="window.location.href = '/admin/dashboard.html'"
+          >
+            <i data-lucide="log-in" class="h-4 w-4"></i>
+            Log Masuk
+          </button>
+        </form>
+
+        <!-- Divider -->
+        <div class="my-6 flex items-center gap-3">
+          <div class="h-px flex-1 bg-gray-200 dark:bg-gray-700"></div>
+          <span class="text-xs text-gray-400 dark:text-gray-500">atau</span>
+          <div class="h-px flex-1 bg-gray-200 dark:bg-gray-700"></div>
+        </div>
+
+        <!-- SSO Options -->
+        <div class="space-y-3">
+          <button type="button" class="btn-secondary w-full">
+            <i data-lucide="fingerprint" class="h-4 w-4"></i>
+            Log Masuk dengan MyDigital ID
+          </button>
+          <button type="button" class="btn-secondary w-full">
+            <i data-lucide="key-round" class="h-4 w-4"></i>
+            Log Masuk dengan SSO Keycloak
+          </button>
+        </div>
+
+        <!-- Register link -->
+        <p class="mt-6 text-center text-sm text-gray-500 dark:text-gray-400">
+          Belum mempunyai akaun?
+          <a
+            href="/daftar.html"
+            class="font-medium text-primary hover:text-primary-light dark:text-accent-light"
+          >
+            Daftar di sini
+          </a>
+        </p>
+      </div>
+
+      <!-- Announcements -->
+      <div class="mt-6 w-full max-w-md">
+        <div
+          class="rounded-lg border border-info/20 bg-info/5 p-4 dark:border-info/30 dark:bg-info/10"
+        >
+          <div class="flex items-start gap-3">
+            <i data-lucide="megaphone" class="mt-0.5 h-4 w-4 text-info"></i>
+            <div>
+              <p class="text-sm font-medium text-gray-900 dark:text-white">Pengumuman</p>
+              <p class="mt-1 text-xs text-gray-600 dark:text-gray-400">
+                Sistem Pelesenan Baharu akan mula beroperasi pada 1 April 2026. Sila kemaskini
+                profil anda sebelum tarikh tersebut.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <p class="mt-8 text-center text-xs text-gray-400 dark:text-gray-600">
+        &copy; 2026 Lembaga Minyak Sawit Malaysia (MPOB). Hak cipta terpelihara.
+      </p>
+    </div>
+
+    <!-- Dark mode toggle for login page (floating) -->
+    <button
+      id="dark-mode-toggle"
+      type="button"
+      class="fixed right-4 top-4 rounded-lg p-2 text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800"
+      title="Tukar Mod Gelap/Cerah"
+    >
+      <i data-lucide="moon" class="h-5 w-5 dark:hidden"></i>
+      <i data-lucide="sun" class="hidden h-5 w-5 dark:block"></i>
+    </button>
+
+  </body>
+</html>
