@@ -21,16 +21,44 @@ document.addEventListener('DOMContentLoaded', async () => {
     )
   })
 
-  // Mobile sidebar toggle
+  // Sidebar toggle (works on all screen sizes)
   const sidebarToggle = document.getElementById('sidebar-toggle')
-  const sidebar = document.getElementById('sidebar')
+  const sidebarAside = document.querySelector('#sidebar aside')
+  const overlay = document.getElementById('sidebar-overlay')
+  const contentArea = document.querySelector('.lg\\:pl-64')
+  const isLargeScreen = () => window.matchMedia('(min-width: 1024px)').matches
+
+  function openSidebar() {
+    sidebarAside?.classList.remove('-translate-x-full')
+    if (isLargeScreen()) {
+      contentArea?.classList.add('lg:pl-64')
+      contentArea?.classList.remove('lg:pl-0')
+    } else {
+      overlay?.classList.remove('hidden')
+    }
+  }
+
+  function closeSidebar() {
+    sidebarAside?.classList.add('-translate-x-full')
+    if (isLargeScreen()) {
+      contentArea?.classList.remove('lg:pl-64')
+      contentArea?.classList.add('lg:pl-0')
+      sidebarAside?.classList.remove('lg:translate-x-0')
+    } else {
+      overlay?.classList.add('hidden')
+    }
+  }
+
   sidebarToggle?.addEventListener('click', () => {
-    sidebar?.classList.toggle('-translate-x-full')
+    if (
+      sidebarAside?.classList.contains('-translate-x-full') &&
+      !sidebarAside?.classList.contains('lg:translate-x-0')
+    ) {
+      openSidebar()
+    } else {
+      closeSidebar()
+    }
   })
 
-  // Close sidebar when clicking overlay on mobile
-  const overlay = document.getElementById('sidebar-overlay')
-  overlay?.addEventListener('click', () => {
-    sidebar?.classList.add('-translate-x-full')
-  })
+  overlay?.addEventListener('click', closeSidebar)
 })

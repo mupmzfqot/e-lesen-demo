@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Pemegang Lesen — e-Lesen MPOB</title>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div id="sidebar"></div>
+
+    <div class="lg:pl-64">
+      <div id="header"></div>
+
+      <main class="p-4 lg:p-6">
+        <!-- Page Title -->
+        <div class="mb-6">
+          <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Dashboard Pemegang Lesen</h1>
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+            Selamat datang, Palm Oil Industries Bhd
+          </p>
+        </div>
+
+        <!-- Stat Cards -->
+        <div class="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <!-- Lesen Aktif -->
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+            >
+              <i data-lucide="file-check" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Lesen Aktif</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">4</p>
+            </div>
+          </div>
+
+          <!-- Akan Tamat -->
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-warning/10 text-warning"
+            >
+              <i data-lucide="alert-circle" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Akan Tamat Tempoh</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">1</p>
+              <p class="text-xs text-warning">Dalam 90 hari</p>
+            </div>
+          </div>
+
+          <!-- Penyata Bulanan -->
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-info/10 text-info"
+            >
+              <i data-lucide="file-text" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Penyata Belum Hantar</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">1</p>
+              <p class="text-xs text-info">Bulan Mac 2026</p>
+            </div>
+          </div>
+
+          <!-- QR Verified -->
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary-light/20 dark:text-primary-light"
+            >
+              <i data-lucide="qr-code" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Pengesahan QR</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">4/4</p>
+              <p class="text-xs text-accent dark:text-accent-light">Semua sah</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alerts -->
+        <div class="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <!-- Expiry Alert -->
+          <div
+            class="rounded-lg border border-warning/20 bg-warning/5 p-4 dark:border-warning/30 dark:bg-warning/10"
+          >
+            <div class="flex items-start gap-3">
+              <i data-lucide="alert-triangle" class="mt-0.5 h-5 w-5 shrink-0 text-warning"></i>
+              <div>
+                <p class="font-medium text-warning">Lesen Akan Tamat Tempoh</p>
+                <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                  Lesen <strong class="text-gray-900 dark:text-white">KPB-2024-1234</strong> (Kilang
+                  Pemprosesan) akan tamat pada
+                  <strong class="text-gray-900 dark:text-white">15/06/2026</strong>. Sila mohon
+                  pembaharuan sebelum tarikh tamat.
+                </p>
+                <a
+                  href="/pelesen/pembaharuan.html"
+                  class="mt-2 inline-flex items-center gap-1 text-sm font-medium text-warning hover:underline"
+                >
+                  Mohon Pembaharuan
+                  <i data-lucide="arrow-right" class="h-3 w-3"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Monthly Statement Reminder -->
+          <div
+            class="rounded-lg border border-info/20 bg-info/5 p-4 dark:border-info/30 dark:bg-info/10"
+          >
+            <div class="flex items-start gap-3">
+              <i data-lucide="calendar" class="mt-0.5 h-5 w-5 shrink-0 text-info"></i>
+              <div>
+                <p class="font-medium text-info">Penyata Bulanan</p>
+                <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                  Penyata bulanan
+                  <strong class="text-gray-900 dark:text-white">Mac 2026</strong> (Borang MB4) perlu
+                  dihantar sebelum
+                  <strong class="text-gray-900 dark:text-white">10/04/2026</strong>.
+                </p>
+                <a
+                  href="/pelesen/penyata-bulanan.html"
+                  class="mt-2 inline-flex items-center gap-1 text-sm font-medium text-info hover:underline"
+                >
+                  Hantar Penyata
+                  <i data-lucide="arrow-right" class="h-3 w-3"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- License List -->
+        <div class="card">
+          <div class="mb-4 flex items-center justify-between">
+            <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Senarai Lesen</h2>
+            <a
+              href="/pelesen/senarai-lesen.html"
+              class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+            >
+              Lihat semua
+            </a>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>No. Lesen</th>
+                  <th>Kategori</th>
+                  <th>Aktiviti</th>
+                  <th>Tarikh Tamat</th>
+                  <th>Status</th>
+                  <th>Tindakan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    KPB-2024-1234
+                  </td>
+                  <td>Kilang Pemprosesan</td>
+                  <td>Memproses kelapa sawit</td>
+                  <td class="whitespace-nowrap">15/06/2026</td>
+                  <td><span class="badge bg-warning/10 text-warning">Akan Tamat</span></td>
+                  <td>
+                    <a
+                      href="/pelesen/pembaharuan.html"
+                      class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                      >Baharui</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    KPB-2024-1235
+                  </td>
+                  <td>Peniaga</td>
+                  <td>Jual beli minyak sawit mentah</td>
+                  <td class="whitespace-nowrap">31/12/2026</td>
+                  <td>
+                    <span
+                      class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                      >Aktif</span
+                    >
+                  </td>
+                  <td>
+                    <a
+                      href="/pelesen/senarai-lesen.html"
+                      class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                      >Lihat</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    KPB-2024-1236
+                  </td>
+                  <td>Pengeksport</td>
+                  <td>Eksport minyak isirung sawit</td>
+                  <td class="whitespace-nowrap">31/12/2026</td>
+                  <td>
+                    <span
+                      class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                      >Aktif</span
+                    >
+                  </td>
+                  <td>
+                    <a
+                      href="/pelesen/senarai-lesen.html"
+                      class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                      >Lihat</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    KPB-2023-0987
+                  </td>
+                  <td>Pengimport</td>
+                  <td>Import baja kelapa sawit</td>
+                  <td class="whitespace-nowrap">30/09/2026</td>
+                  <td>
+                    <span
+                      class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                      >Aktif</span
+                    >
+                  </td>
+                  <td>
+                    <a
+                      href="/pelesen/senarai-lesen.html"
+                      class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                      >Lihat</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

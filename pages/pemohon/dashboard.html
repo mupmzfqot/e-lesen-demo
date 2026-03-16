@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Pemohon — e-Lesen MPOB</title>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div id="sidebar"></div>
+
+    <div class="lg:pl-64">
+      <div id="header"></div>
+
+      <main class="p-4 lg:p-6">
+        <!-- Page Title -->
+        <div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Dashboard Pemohon</h1>
+            <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+              Selamat datang, Sawit Jaya Sdn Bhd
+            </p>
+          </div>
+          <a href="/pemohon/permohonan-baharu.html" class="btn-primary">
+            <i data-lucide="plus" class="h-4 w-4"></i>
+            Permohonan Baharu
+          </a>
+        </div>
+
+        <!-- Stat Cards -->
+        <div class="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <!-- Dalam Proses -->
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-info/10 text-info"
+            >
+              <i data-lucide="loader" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Dalam Proses</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">3</p>
+            </div>
+          </div>
+
+          <!-- Diluluskan -->
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+            >
+              <i data-lucide="check-circle" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Diluluskan</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">12</p>
+            </div>
+          </div>
+
+          <!-- Ditolak -->
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-danger/10 text-danger"
+            >
+              <i data-lucide="x-circle" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Ditolak</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">1</p>
+            </div>
+          </div>
+
+          <!-- Dokumen Belum Lengkap -->
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-warning/10 text-warning"
+            >
+              <i data-lucide="file-warning" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Dokumen Belum Lengkap</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">2</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <a
+            href="/pemohon/permohonan-baharu.html"
+            class="card flex items-center gap-4 transition-colors hover:border-primary dark:hover:border-primary-light"
+          >
+            <div
+              class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary-light/20 dark:text-primary-light"
+            >
+              <i data-lucide="file-plus" class="h-5 w-5"></i>
+            </div>
+            <div>
+              <p class="font-medium text-gray-900 dark:text-white">Permohonan Baharu</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">Mohon lesen baharu</p>
+            </div>
+          </a>
+          <a
+            href="/pemohon/pembaharuan.html"
+            class="card flex items-center gap-4 transition-colors hover:border-accent dark:hover:border-accent-light"
+          >
+            <div
+              class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+            >
+              <i data-lucide="refresh-cw" class="h-5 w-5"></i>
+            </div>
+            <div>
+              <p class="font-medium text-gray-900 dark:text-white">Pembaharuan Lesen</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">Perbaharui lesen sedia ada</p>
+            </div>
+          </a>
+          <a
+            href="/pemohon/status.html"
+            class="card flex items-center gap-4 transition-colors hover:border-info dark:hover:border-info"
+          >
+            <div
+              class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-info/10 text-info"
+            >
+              <i data-lucide="search" class="h-5 w-5"></i>
+            </div>
+            <div>
+              <p class="font-medium text-gray-900 dark:text-white">Semak Status</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">Jejak permohonan anda</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Recent Applications -->
+        <div class="card">
+          <div class="mb-4 flex items-center justify-between">
+            <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Permohonan Terkini</h2>
+            <a
+              href="/pemohon/status.html"
+              class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+            >
+              Lihat semua
+            </a>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>No. Rujukan</th>
+                  <th>Jenis Permohonan</th>
+                  <th>Tarikh Hantar</th>
+                  <th>Status</th>
+                  <th>Tindakan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    LN-2026-0851
+                  </td>
+                  <td>Lesen Baharu — Kilang</td>
+                  <td class="whitespace-nowrap">10/03/2026</td>
+                  <td><span class="badge bg-info/10 text-info">Dalam Semakan</span></td>
+                  <td>
+                    <a
+                      href="/pemohon/status.html"
+                      class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                      >Jejak</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    LN-2026-0834
+                  </td>
+                  <td>Pembaharuan — Peniaga</td>
+                  <td class="whitespace-nowrap">05/03/2026</td>
+                  <td>
+                    <span class="badge bg-warning/10 text-warning">Dokumen Tidak Lengkap</span>
+                  </td>
+                  <td>
+                    <a
+                      href="/pemohon/status.html"
+                      class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                      >Kemaskini</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    LN-2026-0812
+                  </td>
+                  <td>Pindaan — Tambah Aktiviti</td>
+                  <td class="whitespace-nowrap">28/02/2026</td>
+                  <td><span class="badge bg-info/10 text-info">Penilaian Tapak</span></td>
+                  <td>
+                    <a
+                      href="/pemohon/status.html"
+                      class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                      >Jejak</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    LN-2026-0798
+                  </td>
+                  <td>Lesen Baharu — Pengeksport</td>
+                  <td class="whitespace-nowrap">20/02/2026</td>
+                  <td>
+                    <span
+                      class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                      >Diluluskan</span
+                    >
+                  </td>
+                  <td>
+                    <a
+                      href="/pemohon/status.html"
+                      class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                      >Lihat</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    LN-2026-0785
+                  </td>
+                  <td>Pembaharuan — Kilang</td>
+                  <td class="whitespace-nowrap">15/02/2026</td>
+                  <td>
+                    <span
+                      class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                      >Diluluskan</span
+                    >
+                  </td>
+                  <td>
+                    <a
+                      href="/pemohon/status.html"
+                      class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                      >Lihat</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

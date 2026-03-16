@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Pegawai — e-Lesen MPOB</title>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div id="sidebar"></div>
+
+    <div class="lg:pl-64">
+      <div id="header"></div>
+
+      <main class="p-4 lg:p-6">
+        <!-- Page Title -->
+        <div class="mb-6">
+          <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Dashboard Pegawai</h1>
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+            Senarai tugasan dan prestasi pemprosesan
+          </p>
+        </div>
+
+        <!-- KPI Stat Cards -->
+        <div class="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <!-- Tugasan Belum Selesai -->
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-warning/10 text-warning"
+            >
+              <i data-lucide="inbox" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Belum Selesai</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">18</p>
+              <p class="text-xs text-warning">3 melebihi KPI</p>
+            </div>
+          </div>
+
+          <!-- Diproses Hari Ini -->
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+            >
+              <i data-lucide="check-circle" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Selesai Hari Ini</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">7</p>
+              <p class="text-xs text-accent dark:text-accent-light">Sasaran: 10</p>
+            </div>
+          </div>
+
+          <!-- Purata Masa Pemprosesan -->
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-info/10 text-info"
+            >
+              <i data-lucide="timer" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Purata Masa</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">4.2 hari</p>
+              <p class="text-xs text-info">KPI: 7 hari</p>
+            </div>
+          </div>
+
+          <!-- Penilaian Tapak -->
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary-light/20 dark:text-primary-light"
+            >
+              <i data-lucide="map-pin" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Penilaian Tapak</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">3</p>
+              <p class="text-xs text-primary dark:text-primary-light">Dijadualkan minggu ini</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Task Queue + Alerts Row -->
+        <div class="mb-6 grid grid-cols-1 gap-6 xl:grid-cols-3">
+          <!-- Task Queue -->
+          <div class="card xl:col-span-2">
+            <div class="mb-4 flex items-center justify-between">
+              <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Senarai Tugasan</h2>
+              <a
+                href="/pegawai/senarai-permohonan.html"
+                class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+              >
+                Lihat semua
+              </a>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>No. Rujukan</th>
+                    <th>Pemohon</th>
+                    <th>Jenis</th>
+                    <th>Tarikh Terima</th>
+                    <th>Baki Hari</th>
+                    <th>Tindakan</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                      LN-2026-0851
+                    </td>
+                    <td>Sawit Jaya Sdn Bhd</td>
+                    <td>Lesen Baharu</td>
+                    <td class="whitespace-nowrap">10/03/2026</td>
+                    <td><span class="badge bg-danger/10 text-danger">1 hari</span></td>
+                    <td>
+                      <a
+                        href="/pegawai/semakan-permohonan.html"
+                        class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                        >Semak</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                      LN-2026-0849
+                    </td>
+                    <td>Palm Oil Industries Bhd</td>
+                    <td>Pembaharuan</td>
+                    <td class="whitespace-nowrap">11/03/2026</td>
+                    <td><span class="badge bg-warning/10 text-warning">2 hari</span></td>
+                    <td>
+                      <a
+                        href="/pegawai/semakan-permohonan.html"
+                        class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                        >Semak</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                      LN-2026-0845
+                    </td>
+                    <td>Kilang Sawit Timur Sdn Bhd</td>
+                    <td>Pindaan</td>
+                    <td class="whitespace-nowrap">12/03/2026</td>
+                    <td>
+                      <span
+                        class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                        >5 hari</span
+                      >
+                    </td>
+                    <td>
+                      <a
+                        href="/pegawai/semakan-permohonan.html"
+                        class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                        >Semak</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                      LN-2026-0843
+                    </td>
+                    <td>Ladang Subur Enterprise</td>
+                    <td>Lesen Baharu</td>
+                    <td class="whitespace-nowrap">13/03/2026</td>
+                    <td>
+                      <span
+                        class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                        >6 hari</span
+                      >
+                    </td>
+                    <td>
+                      <a
+                        href="/pegawai/semakan-permohonan.html"
+                        class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                        >Semak</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                      LN-2026-0840
+                    </td>
+                    <td>Global Palm Resources Sdn Bhd</td>
+                    <td>Tambahan Aktiviti</td>
+                    <td class="whitespace-nowrap">14/03/2026</td>
+                    <td>
+                      <span
+                        class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                        >7 hari</span
+                      >
+                    </td>
+                    <td>
+                      <a
+                        href="/pegawai/semakan-permohonan.html"
+                        class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                        >Semak</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Alerts / Notifications -->
+          <div class="card">
+            <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">Peringatan</h2>
+            <div class="space-y-3">
+              <!-- Overdue -->
+              <div
+                class="rounded-lg border border-danger/20 bg-danger/5 p-3 dark:border-danger/30 dark:bg-danger/10"
+              >
+                <div class="flex items-start gap-2">
+                  <i data-lucide="alert-triangle" class="mt-0.5 h-4 w-4 shrink-0 text-danger"></i>
+                  <div>
+                    <p class="text-sm font-medium text-danger">3 permohonan melebihi KPI</p>
+                    <p class="mt-0.5 text-xs text-gray-600 dark:text-gray-400">
+                      Sila ambil tindakan segera
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Renewal reminder -->
+              <div
+                class="rounded-lg border border-warning/20 bg-warning/5 p-3 dark:border-warning/30 dark:bg-warning/10"
+              >
+                <div class="flex items-start gap-2">
+                  <i data-lucide="calendar" class="mt-0.5 h-4 w-4 shrink-0 text-warning"></i>
+                  <div>
+                    <p class="text-sm font-medium text-warning">12 lesen akan tamat tempoh</p>
+                    <p class="mt-0.5 text-xs text-gray-600 dark:text-gray-400">
+                      Dalam tempoh 3 bulan akan datang
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Site visit -->
+              <div
+                class="rounded-lg border border-info/20 bg-info/5 p-3 dark:border-info/30 dark:bg-info/10"
+              >
+                <div class="flex items-start gap-2">
+                  <i data-lucide="map-pin" class="mt-0.5 h-4 w-4 shrink-0 text-info"></i>
+                  <div>
+                    <p class="text-sm font-medium text-info">Penilaian tapak esok</p>
+                    <p class="mt-0.5 text-xs text-gray-600 dark:text-gray-400">
+                      Sawit Jaya Sdn Bhd — Kuantan, Pahang
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Document incomplete -->
+              <div
+                class="rounded-lg border border-gray-200 bg-gray-50 p-3 dark:border-gray-700 dark:bg-gray-800"
+              >
+                <div class="flex items-start gap-2">
+                  <i
+                    data-lucide="file-x"
+                    class="mt-0.5 h-4 w-4 shrink-0 text-gray-500 dark:text-gray-400"
+                  ></i>
+                  <div>
+                    <p class="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      5 dokumen tidak lengkap
+                    </p>
+                    <p class="mt-0.5 text-xs text-gray-600 dark:text-gray-400">
+                      Menunggu pemohon kemaskini
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- KPI Performance -->
+        <div class="card">
+          <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+            Prestasi KPI Bulan Ini
+          </h2>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <div>
+              <div class="mb-1 flex items-center justify-between text-sm">
+                <span class="text-gray-600 dark:text-gray-400">Lesen Baharu (14 hari)</span>
+                <span class="font-medium text-gray-900 dark:text-white">85%</span>
+              </div>
+              <div class="h-2 w-full rounded-full bg-gray-100 dark:bg-gray-700">
+                <div class="h-2 rounded-full bg-accent" style="width: 85%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="mb-1 flex items-center justify-between text-sm">
+                <span class="text-gray-600 dark:text-gray-400">Pembaharuan (7 hari)</span>
+                <span class="font-medium text-gray-900 dark:text-white">92%</span>
+              </div>
+              <div class="h-2 w-full rounded-full bg-gray-100 dark:bg-gray-700">
+                <div class="h-2 rounded-full bg-accent" style="width: 92%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="mb-1 flex items-center justify-between text-sm">
+                <span class="text-gray-600 dark:text-gray-400">Pindaan (10 hari)</span>
+                <span class="font-medium text-gray-900 dark:text-white">78%</span>
+              </div>
+              <div class="h-2 w-full rounded-full bg-gray-100 dark:bg-gray-700">
+                <div class="h-2 rounded-full bg-warning" style="width: 78%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
