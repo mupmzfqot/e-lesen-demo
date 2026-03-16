@@ -19,7 +19,8 @@ function pagesRewrite(): PluginOption {
           req.url.startsWith('/node_modules/') ||
           req.url.startsWith('/@') ||
           req.url.startsWith('/pages/') ||
-          req.url.startsWith('/partials/')
+          req.url.startsWith('/partials/') ||
+          req.url.startsWith('/assets/')
         ) {
           return next()
         }
