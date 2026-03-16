@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pembaharuan Lesen — e-Lesen MPOB</title>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div id="sidebar"></div>
+
+    <div class="lg:pl-64">
+      <div id="header"></div>
+
+      <main class="p-4 lg:p-6">
+        <div class="mb-6">
+          <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Pembaharuan Lesen</h1>
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+            Pilih lesen yang ingin diperbaharui
+          </p>
+        </div>
+
+        <!-- Expiring Licenses -->
+        <div
+          class="mb-6 rounded-lg border border-warning/20 bg-warning/5 p-4 dark:border-warning/30 dark:bg-warning/10"
+        >
+          <div class="flex items-start gap-3">
+            <i data-lucide="alert-triangle" class="mt-0.5 h-5 w-5 shrink-0 text-warning"></i>
+            <div>
+              <p class="font-medium text-warning">2 lesen akan tamat tempoh dalam 3 bulan</p>
+              <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                Sila mohon pembaharuan sebelum tarikh tamat untuk mengelakkan gangguan operasi.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- License List for Renewal -->
+        <div class="card mb-6">
+          <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+            Lesen Layak Diperbaharui
+          </h2>
+          <div class="overflow-x-auto">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Pilih</th>
+                  <th>No. Lesen</th>
+                  <th>Kategori</th>
+                  <th>Aktiviti</th>
+                  <th>Tarikh Tamat</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <input type="radio" name="license" class="text-primary focus:ring-primary" />
+                  </td>
+                  <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    KPB-2024-1234
+                  </td>
+                  <td>Kilang Pemprosesan</td>
+                  <td>Memproses kelapa sawit</td>
+                  <td class="whitespace-nowrap">15/06/2026</td>
+                  <td><span class="badge bg-danger/10 text-danger">Tamat 3 bulan</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="radio" name="license" class="text-primary focus:ring-primary" />
+                  </td>
+                  <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    KPB-2023-0987
+                  </td>
+                  <td>Pengimport</td>
+                  <td>Import baja kelapa sawit</td>
+                  <td class="whitespace-nowrap">30/09/2026</td>
+                  <td><span class="badge bg-warning/10 text-warning">Tamat 6 bulan</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="radio" name="license" class="text-primary focus:ring-primary" />
+                  </td>
+                  <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    KPB-2024-1235
+                  </td>
+                  <td>Peniaga</td>
+                  <td>Jual beli minyak sawit mentah</td>
+                  <td class="whitespace-nowrap">31/12/2026</td>
+                  <td>
+                    <span
+                      class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                      >Aktif</span
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Renewal Form -->
+        <div class="card">
+          <h2 class="mb-6 text-lg font-semibold text-gray-900 dark:text-white">
+            Maklumat Pembaharuan
+          </h2>
+          <form class="space-y-6" onsubmit="return false">
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div>
+                <label class="form-label">Tempoh Pembaharuan</label>
+                <select class="form-input">
+                  <option>1 Tahun</option>
+                  <option>2 Tahun</option>
+                  <option>3 Tahun</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label">Sebab Pembaharuan</label>
+                <select class="form-input">
+                  <option>Lesen akan tamat tempoh</option>
+                  <option>Lesen telah tamat tempoh</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="form-label">Adakah terdapat perubahan pada butiran lesen?</label>
+              <div class="mt-2 space-y-2">
+                <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+                  <input
+                    type="radio"
+                    name="changes"
+                    value="no"
+                    class="text-primary focus:ring-primary"
+                    checked
+                  />
+                  Tiada perubahan
+                </label>
+                <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+                  <input
+                    type="radio"
+                    name="changes"
+                    value="yes"
+                    class="text-primary focus:ring-primary"
+                  />
+                  Ada perubahan (sila nyatakan)
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <label class="form-label">Catatan Tambahan</label>
+              <textarea
+                class="form-input"
+                rows="3"
+                placeholder="Masukkan catatan jika ada..."
+              ></textarea>
+            </div>
+
+            <!-- Document Upload -->
+            <div>
+              <label class="form-label">Dokumen Sokongan</label>
+              <div
+                class="flex items-center justify-center rounded-lg border-2 border-dashed border-gray-300 px-6 py-8 dark:border-gray-600"
+              >
+                <div class="text-center">
+                  <i data-lucide="upload" class="mx-auto mb-2 h-8 w-8 text-gray-400"></i>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Seret dan lepas fail di sini, atau
+                    <button
+                      type="button"
+                      class="font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                    >
+                      pilih fail
+                    </button>
+                  </p>
+                  <p class="mt-1 text-xs text-gray-400">PDF, JPG, PNG (maks. 10MB setiap fail)</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center justify-end gap-3 border-t border-gray-200 pt-6 dark:border-gray-700"
+            >
+              <a href="/pemohon/dashboard.html" class="btn-secondary">Batal</a>
+              <button type="submit" class="btn-primary">
+                <i data-lucide="send" class="h-4 w-4"></i>
+                Hantar Permohonan
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

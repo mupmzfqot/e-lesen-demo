@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Permohonan Baharu — e-Lesen MPOB</title>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div id="sidebar"></div>
+
+    <div class="lg:pl-64">
+      <div id="header"></div>
+
+      <main class="p-4 lg:p-6">
+        <!-- Page Title -->
+        <div class="mb-6">
+          <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Permohonan Lesen Baharu</h1>
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+            Sila lengkapkan semua maklumat yang diperlukan
+          </p>
+        </div>
+
+        <!-- Wizard Steps -->
+        <div class="mb-8">
+          <div class="flex items-center justify-between">
+            <div class="flex flex-1 items-center" data-step-indicator>
+              <div
+                data-step-circle
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white"
+              >
+                1
+              </div>
+              <div data-step-bar class="mx-2 hidden h-1 flex-1 rounded bg-primary sm:block"></div>
+            </div>
+            <div class="flex flex-1 items-center" data-step-indicator>
+              <div
+                data-step-circle
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-200 text-sm font-bold text-gray-500 dark:bg-gray-700 dark:text-gray-400"
+              >
+                2
+              </div>
+              <div
+                data-step-bar
+                class="mx-2 hidden h-1 flex-1 rounded bg-gray-200 sm:block dark:bg-gray-700"
+              ></div>
+            </div>
+            <div class="flex flex-1 items-center" data-step-indicator>
+              <div
+                data-step-circle
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-200 text-sm font-bold text-gray-500 dark:bg-gray-700 dark:text-gray-400"
+              >
+                3
+              </div>
+              <div
+                data-step-bar
+                class="mx-2 hidden h-1 flex-1 rounded bg-gray-200 sm:block dark:bg-gray-700"
+              ></div>
+            </div>
+            <div class="flex items-center" data-step-indicator>
+              <div
+                data-step-circle
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-200 text-sm font-bold text-gray-500 dark:bg-gray-700 dark:text-gray-400"
+              >
+                4
+              </div>
+            </div>
+          </div>
+          <div class="mt-2 flex justify-between text-xs text-gray-500 dark:text-gray-400">
+            <span data-step-label class="font-medium text-primary dark:text-primary-light"
+              >Jenis Lesen</span
+            >
+            <span data-step-label class="text-gray-500 dark:text-gray-400">Maklumat Syarikat</span>
+            <span data-step-label class="text-gray-500 dark:text-gray-400">Dokumen</span>
+            <span data-step-label class="text-gray-500 dark:text-gray-400">Pengesahan</span>
+          </div>
+        </div>
+
+        <!-- Step 1: Jenis Lesen -->
+        <div id="step-1" class="card wizard-step">
+          <h2 class="mb-6 text-lg font-semibold text-gray-900 dark:text-white">
+            Langkah 1: Pilih Jenis Lesen
+          </h2>
+
+          <form class="space-y-6" onsubmit="return false">
+            <div>
+              <label class="form-label">Jenis Permohonan</label>
+              <select class="form-input">
+                <option value="">-- Pilih jenis permohonan --</option>
+                <option>Lesen Baharu</option>
+                <option>Pengambilalihan</option>
+                <option>Tukar Taraf</option>
+                <option>Sementara</option>
+                <option>Khas</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="form-label">Kategori Lesen</label>
+              <select class="form-input">
+                <option value="">-- Pilih kategori lesen --</option>
+                <option>Kilang Pemprosesan</option>
+                <option>Penapis</option>
+                <option>Peniaga</option>
+                <option>Pengeksport</option>
+                <option>Pengimport</option>
+                <option>Pembungkus</option>
+                <option>Pengangkut</option>
+                <option>Stor</option>
+                <option>Kebun Kecil (SH)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="form-label">Aktiviti yang Dipohon</label>
+              <div class="space-y-2">
+                <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+                  <input
+                    type="checkbox"
+                    class="rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                  />
+                  Memproses kelapa sawit
+                </label>
+                <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+                  <input
+                    type="checkbox"
+                    class="rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                  />
+                  Memproses isirung sawit
+                </label>
+                <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+                  <input
+                    type="checkbox"
+                    class="rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                  />
+                  Jual beli minyak sawit mentah (CPO)
+                </label>
+                <label class="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+                  <input
+                    type="checkbox"
+                    class="rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                  />
+                  Eksport minyak sawit dan produk sawit
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <label class="form-label">Daya Pemprosesan (tan metrik/jam)</label>
+              <input type="number" class="form-input" placeholder="Contoh: 60" />
+              <p class="mt-1 text-xs text-gray-400 dark:text-gray-500">
+                Hanya untuk kategori Kilang Pemprosesan dan Penapis
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+              <div>
+                <label class="form-label">Negeri Premis</label>
+                <select class="form-input">
+                  <option value="">-- Pilih negeri --</option>
+                  <option>Johor</option>
+                  <option>Kedah</option>
+                  <option>Kelantan</option>
+                  <option>Melaka</option>
+                  <option>Negeri Sembilan</option>
+                  <option>Pahang</option>
+                  <option>Perak</option>
+                  <option>Perlis</option>
+                  <option>Pulau Pinang</option>
+                  <option>Sabah</option>
+                  <option>Sarawak</option>
+                  <option>Selangor</option>
+                  <option>Terengganu</option>
+                  <option>W.P. Kuala Lumpur</option>
+                  <option>W.P. Labuan</option>
+                  <option>W.P. Putrajaya</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label">Daerah</label>
+                <select class="form-input">
+                  <option value="">-- Pilih daerah --</option>
+                  <option>Kuantan</option>
+                  <option>Temerloh</option>
+                  <option>Pekan</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label">Mukim</label>
+                <select class="form-input">
+                  <option value="">-- Pilih mukim --</option>
+                  <option>Mukim Kuala Kuantan</option>
+                  <option>Mukim Beserah</option>
+                </select>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center justify-end gap-3 border-t border-gray-200 pt-6 dark:border-gray-700"
+            >
+              <button type="button" class="btn-secondary">
+                <i data-lucide="save" class="h-4 w-4"></i>
+                Simpan Draf
+              </button>
+              <button type="button" class="btn-primary" onclick="goToStep(2)">
+                Seterusnya
+                <i data-lucide="arrow-right" class="h-4 w-4"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Step 2: Maklumat Syarikat -->
+        <div id="step-2" class="card wizard-step hidden">
+          <h2 class="mb-6 text-lg font-semibold text-gray-900 dark:text-white">
+            Langkah 2: Maklumat Syarikat
+          </h2>
+
+          <form class="space-y-6" onsubmit="return false">
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div>
+                <label class="form-label">Nama Syarikat</label>
+                <input type="text" class="form-input" placeholder="Nama penuh syarikat" />
+              </div>
+              <div>
+                <label class="form-label">No. Pendaftaran SSM</label>
+                <input type="text" class="form-input" placeholder="Contoh: 201901012345" />
+              </div>
+              <div>
+                <label class="form-label">Nama Wakil / Pemohon</label>
+                <input type="text" class="form-input" placeholder="Nama penuh" />
+              </div>
+              <div>
+                <label class="form-label">No. Kad Pengenalan</label>
+                <input type="text" class="form-input" placeholder="Contoh: 880515-06-5432" />
+              </div>
+              <div>
+                <label class="form-label">Jawatan</label>
+                <input type="text" class="form-input" placeholder="Contoh: Pengarah Urusan" />
+              </div>
+              <div>
+                <label class="form-label">No. Telefon</label>
+                <input type="tel" class="form-input" placeholder="+60 12-345 6789" />
+              </div>
+              <div>
+                <label class="form-label">Emel</label>
+                <input type="email" class="form-input" placeholder="emel@syarikat.com" />
+              </div>
+              <div>
+                <label class="form-label">No. Faks</label>
+                <input type="tel" class="form-input" placeholder="+60 9-XXX XXXX" />
+              </div>
+            </div>
+
+            <div>
+              <label class="form-label">Alamat Berdaftar Syarikat</label>
+              <textarea
+                class="form-input"
+                rows="2"
+                placeholder="Alamat penuh syarikat..."
+              ></textarea>
+            </div>
+
+            <div>
+              <label class="form-label">Alamat Premis</label>
+              <textarea
+                class="form-input"
+                rows="2"
+                placeholder="Alamat lokasi premis yang dipohon..."
+              ></textarea>
+            </div>
+
+            <div class="border-t border-gray-200 pt-6 dark:border-gray-700">
+              <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white">
+                Senarai Pengarah / Pemegang Saham
+              </h3>
+              <div class="overflow-x-auto">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Nama</th>
+                      <th>No. KP</th>
+                      <th>Jawatan</th>
+                      <th>Saham (%)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="text" class="form-input" placeholder="Nama penuh" /></td>
+                      <td><input type="text" class="form-input" placeholder="XXXXXX-XX-XXXX" /></td>
+                      <td><input type="text" class="form-input" placeholder="Jawatan" /></td>
+                      <td><input type="number" class="form-input" placeholder="%" /></td>
+                    </tr>
+                    <tr>
+                      <td><input type="text" class="form-input" placeholder="Nama penuh" /></td>
+                      <td><input type="text" class="form-input" placeholder="XXXXXX-XX-XXXX" /></td>
+                      <td><input type="text" class="form-input" placeholder="Jawatan" /></td>
+                      <td><input type="number" class="form-input" placeholder="%" /></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <button
+                type="button"
+                class="mt-2 text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+              >
+                + Tambah pengarah
+              </button>
+            </div>
+
+            <div
+              class="flex items-center justify-between gap-3 border-t border-gray-200 pt-6 dark:border-gray-700"
+            >
+              <button type="button" class="btn-secondary" onclick="goToStep(1)">
+                <i data-lucide="arrow-left" class="h-4 w-4"></i>
+                Sebelumnya
+              </button>
+              <button type="button" class="btn-primary" onclick="goToStep(3)">
+                Seterusnya
+                <i data-lucide="arrow-right" class="h-4 w-4"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Step 3: Dokumen -->
+        <div id="step-3" class="card wizard-step hidden">
+          <h2 class="mb-6 text-lg font-semibold text-gray-900 dark:text-white">
+            Langkah 3: Muat Naik Dokumen
+          </h2>
+
+          <form class="space-y-6" onsubmit="return false">
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              Sila muat naik semua dokumen sokongan yang diperlukan. Format yang diterima: PDF, JPG,
+              PNG (maks. 10MB setiap fail).
+            </p>
+
+            <div class="space-y-4">
+              <div class="rounded-lg border border-gray-200 p-4 dark:border-gray-700">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <i data-lucide="file-text" class="h-5 w-5 text-gray-400"></i>
+                    <div>
+                      <p class="text-sm font-medium text-gray-900 dark:text-white">
+                        Borang Permohonan (ditandatangani)
+                      </p>
+                      <p class="text-xs text-gray-500 dark:text-gray-400">Wajib</p>
+                    </div>
+                  </div>
+                  <button type="button" class="btn-secondary text-xs">
+                    <i data-lucide="upload" class="h-3 w-3"></i>
+                    Muat Naik
+                  </button>
+                </div>
+              </div>
+
+              <div class="rounded-lg border border-gray-200 p-4 dark:border-gray-700">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <i data-lucide="file-text" class="h-5 w-5 text-accent"></i>
+                    <div>
+                      <p class="text-sm font-medium text-gray-900 dark:text-white">
+                        Sijil Pendaftaran SSM
+                      </p>
+                      <p class="text-xs text-accent dark:text-accent-light">
+                        Dimuat naik — sijil_ssm.pdf (1.2 MB)
+                      </p>
+                    </div>
+                  </div>
+                  <button type="button" class="text-xs text-danger hover:underline">Padam</button>
+                </div>
+              </div>
+
+              <div class="rounded-lg border border-gray-200 p-4 dark:border-gray-700">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <i data-lucide="file-text" class="h-5 w-5 text-gray-400"></i>
+                    <div>
+                      <p class="text-sm font-medium text-gray-900 dark:text-white">
+                        Pelan Tapak Premis
+                      </p>
+                      <p class="text-xs text-gray-500 dark:text-gray-400">Wajib</p>
+                    </div>
+                  </div>
+                  <button type="button" class="btn-secondary text-xs">
+                    <i data-lucide="upload" class="h-3 w-3"></i>
+                    Muat Naik
+                  </button>
+                </div>
+              </div>
+
+              <div class="rounded-lg border border-gray-200 p-4 dark:border-gray-700">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <i data-lucide="file-text" class="h-5 w-5 text-gray-400"></i>
+                    <div>
+                      <p class="text-sm font-medium text-gray-900 dark:text-white">
+                        Surat Kelulusan PBT
+                      </p>
+                      <p class="text-xs text-gray-500 dark:text-gray-400">Wajib</p>
+                    </div>
+                  </div>
+                  <button type="button" class="btn-secondary text-xs">
+                    <i data-lucide="upload" class="h-3 w-3"></i>
+                    Muat Naik
+                  </button>
+                </div>
+              </div>
+
+              <div class="rounded-lg border border-gray-200 p-4 dark:border-gray-700">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <i data-lucide="file-text" class="h-5 w-5 text-gray-400"></i>
+                    <div>
+                      <p class="text-sm font-medium text-gray-900 dark:text-white">
+                        Laporan Penilaian Impak Alam Sekitar (EIA)
+                      </p>
+                      <p class="text-xs text-gray-500 dark:text-gray-400">
+                        Wajib untuk kilang pemprosesan
+                      </p>
+                    </div>
+                  </div>
+                  <button type="button" class="btn-secondary text-xs">
+                    <i data-lucide="upload" class="h-3 w-3"></i>
+                    Muat Naik
+                  </button>
+                </div>
+              </div>
+
+              <div class="rounded-lg border border-gray-200 p-4 dark:border-gray-700">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <i data-lucide="file-text" class="h-5 w-5 text-gray-400"></i>
+                    <div>
+                      <p class="text-sm font-medium text-gray-900 dark:text-white">
+                        Dokumen Tambahan (Pilihan)
+                      </p>
+                      <p class="text-xs text-gray-500 dark:text-gray-400">Pilihan</p>
+                    </div>
+                  </div>
+                  <button type="button" class="btn-secondary text-xs">
+                    <i data-lucide="upload" class="h-3 w-3"></i>
+                    Muat Naik
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center justify-between gap-3 border-t border-gray-200 pt-6 dark:border-gray-700"
+            >
+              <button type="button" class="btn-secondary" onclick="goToStep(2)">
+                <i data-lucide="arrow-left" class="h-4 w-4"></i>
+                Sebelumnya
+              </button>
+              <button type="button" class="btn-primary" onclick="goToStep(4)">
+                Seterusnya
+                <i data-lucide="arrow-right" class="h-4 w-4"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Step 4: Pengesahan -->
+        <div id="step-4" class="card wizard-step hidden">
+          <h2 class="mb-6 text-lg font-semibold text-gray-900 dark:text-white">
+            Langkah 4: Pengesahan &amp; Hantar
+          </h2>
+
+          <form class="space-y-6" onsubmit="return false">
+            <div
+              class="rounded-lg border border-info/20 bg-info/5 p-4 dark:border-info/30 dark:bg-info/10"
+            >
+              <div class="flex items-start gap-3">
+                <i data-lucide="info" class="mt-0.5 h-5 w-5 shrink-0 text-info"></i>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  Sila semak semua maklumat sebelum menghantar permohonan. Permohonan yang telah
+                  dihantar tidak boleh diubah.
+                </p>
+              </div>
+            </div>
+
+            <!-- Summary -->
+            <div class="space-y-4">
+              <div class="rounded-lg border border-gray-200 p-4 dark:border-gray-700">
+                <div class="mb-2 flex items-center justify-between">
+                  <h3 class="text-sm font-semibold text-gray-900 dark:text-white">Jenis Lesen</h3>
+                  <button
+                    type="button"
+                    class="text-xs font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                    onclick="goToStep(1)"
+                  >
+                    Ubah
+                  </button>
+                </div>
+                <dl class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                  <div>
+                    <dt class="text-xs text-gray-500 dark:text-gray-400">Jenis</dt>
+                    <dd class="text-sm text-gray-900 dark:text-white">Lesen Baharu</dd>
+                  </div>
+                  <div>
+                    <dt class="text-xs text-gray-500 dark:text-gray-400">Kategori</dt>
+                    <dd class="text-sm text-gray-900 dark:text-white">Kilang Pemprosesan</dd>
+                  </div>
+                  <div>
+                    <dt class="text-xs text-gray-500 dark:text-gray-400">Aktiviti</dt>
+                    <dd class="text-sm text-gray-900 dark:text-white">Memproses kelapa sawit</dd>
+                  </div>
+                  <div>
+                    <dt class="text-xs text-gray-500 dark:text-gray-400">Lokasi</dt>
+                    <dd class="text-sm text-gray-900 dark:text-white">Kuantan, Pahang</dd>
+                  </div>
+                </dl>
+              </div>
+
+              <div class="rounded-lg border border-gray-200 p-4 dark:border-gray-700">
+                <div class="mb-2 flex items-center justify-between">
+                  <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
+                    Maklumat Syarikat
+                  </h3>
+                  <button
+                    type="button"
+                    class="text-xs font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                    onclick="goToStep(2)"
+                  >
+                    Ubah
+                  </button>
+                </div>
+                <dl class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                  <div>
+                    <dt class="text-xs text-gray-500 dark:text-gray-400">Syarikat</dt>
+                    <dd class="text-sm text-gray-900 dark:text-white">Sawit Jaya Sdn Bhd</dd>
+                  </div>
+                  <div>
+                    <dt class="text-xs text-gray-500 dark:text-gray-400">SSM</dt>
+                    <dd class="text-sm text-gray-900 dark:text-white">201901012345</dd>
+                  </div>
+                  <div>
+                    <dt class="text-xs text-gray-500 dark:text-gray-400">Pemohon</dt>
+                    <dd class="text-sm text-gray-900 dark:text-white">Mohd Hafiz bin Ibrahim</dd>
+                  </div>
+                  <div>
+                    <dt class="text-xs text-gray-500 dark:text-gray-400">Telefon</dt>
+                    <dd class="text-sm text-gray-900 dark:text-white">+60 12-345 6789</dd>
+                  </div>
+                </dl>
+              </div>
+
+              <div class="rounded-lg border border-gray-200 p-4 dark:border-gray-700">
+                <div class="mb-2 flex items-center justify-between">
+                  <h3 class="text-sm font-semibold text-gray-900 dark:text-white">Dokumen</h3>
+                  <button
+                    type="button"
+                    class="text-xs font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                    onclick="goToStep(3)"
+                  >
+                    Ubah
+                  </button>
+                </div>
+                <ul class="space-y-1">
+                  <li class="flex items-center gap-2 text-sm">
+                    <i data-lucide="check-circle" class="h-4 w-4 text-accent"></i>
+                    <span class="text-gray-700 dark:text-gray-300">Sijil Pendaftaran SSM</span>
+                  </li>
+                  <li class="flex items-center gap-2 text-sm">
+                    <i data-lucide="alert-circle" class="h-4 w-4 text-warning"></i>
+                    <span class="text-gray-700 dark:text-gray-300"
+                      >Borang Permohonan — belum dimuat naik</span
+                    >
+                  </li>
+                  <li class="flex items-center gap-2 text-sm">
+                    <i data-lucide="alert-circle" class="h-4 w-4 text-warning"></i>
+                    <span class="text-gray-700 dark:text-gray-300"
+                      >Pelan Tapak Premis — belum dimuat naik</span
+                    >
+                  </li>
+                  <li class="flex items-center gap-2 text-sm">
+                    <i data-lucide="alert-circle" class="h-4 w-4 text-warning"></i>
+                    <span class="text-gray-700 dark:text-gray-300"
+                      >Surat Kelulusan PBT — belum dimuat naik</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Declaration -->
+            <div
+              class="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800/50"
+            >
+              <label class="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                <input
+                  type="checkbox"
+                  class="mt-0.5 rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                />
+                Saya mengaku bahawa semua maklumat dan dokumen yang dikemukakan adalah benar,
+                lengkap dan tepat. Saya memahami bahawa sebarang maklumat palsu atau penipuan boleh
+                menyebabkan permohonan ditolak atau lesen dibatalkan.
+              </label>
+            </div>
+
+            <!-- Fee Summary -->
+            <div class="rounded-lg border border-gray-200 p-4 dark:border-gray-700">
+              <h3 class="mb-3 text-sm font-semibold text-gray-900 dark:text-white">
+                Ringkasan Bayaran
+              </h3>
+              <dl class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <dt class="text-sm text-gray-600 dark:text-gray-400">Yuran Permohonan</dt>
+                  <dd class="text-sm font-medium text-gray-900 dark:text-white">RM 500.00</dd>
+                </div>
+                <div class="flex items-center justify-between">
+                  <dt class="text-sm text-gray-600 dark:text-gray-400">Caj Pemprosesan</dt>
+                  <dd class="text-sm font-medium text-gray-900 dark:text-white">RM 50.00</dd>
+                </div>
+                <div
+                  class="flex items-center justify-between border-t border-gray-200 pt-2 dark:border-gray-700"
+                >
+                  <dt class="text-sm font-semibold text-gray-900 dark:text-white">Jumlah</dt>
+                  <dd class="text-sm font-bold text-gray-900 dark:text-white">RM 550.00</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div
+              class="flex items-center justify-between gap-3 border-t border-gray-200 pt-6 dark:border-gray-700"
+            >
+              <button type="button" class="btn-secondary" onclick="goToStep(3)">
+                <i data-lucide="arrow-left" class="h-4 w-4"></i>
+                Sebelumnya
+              </button>
+              <div class="flex items-center gap-3">
+                <button type="button" class="btn-secondary">
+                  <i data-lucide="save" class="h-4 w-4"></i>
+                  Simpan Draf
+                </button>
+                <button type="button" class="btn-accent" onclick="submitApplication()">
+                  <i data-lucide="send" class="h-4 w-4"></i>
+                  Hantar Permohonan
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Success Message -->
+        <div id="success-message" class="hidden">
+          <div class="card text-center">
+            <div
+              class="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+            >
+              <i data-lucide="check-circle" class="h-10 w-10"></i>
+            </div>
+            <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+              Permohonan Berjaya Dihantar!
+            </h2>
+            <p class="mb-1 text-sm text-gray-500 dark:text-gray-400">No. Rujukan Permohonan</p>
+            <p class="mb-4 text-2xl font-bold text-primary dark:text-primary-light">LN-2026-0852</p>
+            <p class="mx-auto mb-6 max-w-md text-sm text-gray-600 dark:text-gray-400">
+              Permohonan anda telah berjaya dihantar dan sedang diproses. Anda boleh menyemak status
+              permohonan melalui halaman Status Permohonan.
+            </p>
+            <div
+              class="mb-6 rounded-lg border border-gray-200 bg-gray-50 p-4 text-left dark:border-gray-700 dark:bg-gray-800/50"
+            >
+              <h3 class="mb-3 text-sm font-semibold text-gray-900 dark:text-white">Ringkasan</h3>
+              <dl class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                <div>
+                  <dt class="text-xs text-gray-500 dark:text-gray-400">Jenis Permohonan</dt>
+                  <dd class="text-sm text-gray-900 dark:text-white">
+                    Lesen Baharu — Kilang Pemprosesan
+                  </dd>
+                </div>
+                <div>
+                  <dt class="text-xs text-gray-500 dark:text-gray-400">Pemohon</dt>
+                  <dd class="text-sm text-gray-900 dark:text-white">Sawit Jaya Sdn Bhd</dd>
+                </div>
+                <div>
+                  <dt class="text-xs text-gray-500 dark:text-gray-400">Tarikh Hantar</dt>
+                  <dd class="text-sm text-gray-900 dark:text-white">16/03/2026</dd>
+                </div>
+                <div>
+                  <dt class="text-xs text-gray-500 dark:text-gray-400">Jumlah Bayaran</dt>
+                  <dd class="text-sm text-gray-900 dark:text-white">RM 550.00</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="flex items-center justify-center gap-3">
+              <a href="/pemohon/status.html" class="btn-primary">
+                <i data-lucide="eye" class="h-4 w-4"></i>
+                Semak Status
+              </a>
+              <a href="/pemohon/dashboard.html" class="btn-secondary">
+                <i data-lucide="home" class="h-4 w-4"></i>
+                Kembali ke Dashboard
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/wizard.ts"></script>
+  </body>
+</html>

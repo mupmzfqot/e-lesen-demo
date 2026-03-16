@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil Pemohon — e-Lesen MPOB</title>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div id="sidebar"></div>
+
+    <div class="lg:pl-64">
+      <div id="header"></div>
+
+      <main class="p-4 lg:p-6">
+        <div class="mb-6">
+          <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Profil Pengguna</h1>
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+            Kemaskini maklumat akaun dan syarikat anda
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 xl:grid-cols-3">
+          <!-- Profile Card -->
+          <div class="card text-center">
+            <div
+              class="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-primary-light/20 dark:text-primary-light"
+            >
+              <i data-lucide="user" class="h-10 w-10"></i>
+            </div>
+            <h2 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Mohd Hafiz bin Ibrahim
+            </h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Pemohon / Pemegang Lesen</p>
+            <p class="mt-1 text-xs text-gray-400 dark:text-gray-500">ID: USR-2024-00451</p>
+            <div class="mt-4 border-t border-gray-200 pt-4 dark:border-gray-700">
+              <dl class="space-y-2 text-left">
+                <div class="flex justify-between">
+                  <dt class="text-xs text-gray-500 dark:text-gray-400">Emel</dt>
+                  <dd class="text-xs text-gray-900 dark:text-white">hafiz@sawitjaya.com</dd>
+                </div>
+                <div class="flex justify-between">
+                  <dt class="text-xs text-gray-500 dark:text-gray-400">Telefon</dt>
+                  <dd class="text-xs text-gray-900 dark:text-white">+60 12-345 6789</dd>
+                </div>
+                <div class="flex justify-between">
+                  <dt class="text-xs text-gray-500 dark:text-gray-400">Tarikh Daftar</dt>
+                  <dd class="text-xs text-gray-900 dark:text-white">15/01/2024</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <!-- Edit Form -->
+          <div class="card xl:col-span-2">
+            <h2 class="mb-6 text-lg font-semibold text-gray-900 dark:text-white">
+              Maklumat Peribadi
+            </h2>
+            <form class="space-y-6" onsubmit="return false">
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div>
+                  <label class="form-label">Nama Penuh</label>
+                  <input type="text" class="form-input" value="Mohd Hafiz bin Ibrahim" />
+                </div>
+                <div>
+                  <label class="form-label">No. Kad Pengenalan</label>
+                  <input
+                    type="text"
+                    class="form-input bg-gray-50 dark:bg-gray-800"
+                    value="880515-06-5432"
+                    readonly
+                  />
+                </div>
+                <div>
+                  <label class="form-label">Emel</label>
+                  <input type="email" class="form-input" value="hafiz@sawitjaya.com" />
+                </div>
+                <div>
+                  <label class="form-label">No. Telefon</label>
+                  <input type="tel" class="form-input" value="+60 12-345 6789" />
+                </div>
+              </div>
+
+              <div class="border-t border-gray-200 pt-6 dark:border-gray-700">
+                <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white">
+                  Maklumat Syarikat
+                </h3>
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  <div>
+                    <label class="form-label">Nama Syarikat</label>
+                    <input type="text" class="form-input" value="Sawit Jaya Sdn Bhd" />
+                  </div>
+                  <div>
+                    <label class="form-label">No. Pendaftaran SSM</label>
+                    <input type="text" class="form-input" value="201901012345" />
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label class="form-label">Alamat Syarikat</label>
+                    <textarea class="form-input" rows="2">
+No. 12, Jalan Industri 3, Kawasan Perindustrian Gebeng, 26080 Kuantan, Pahang</textarea
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="border-t border-gray-200 pt-6 dark:border-gray-700">
+                <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white">
+                  Tukar Kata Laluan
+                </h3>
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                  <div>
+                    <label class="form-label">Kata Laluan Semasa</label>
+                    <input type="password" class="form-input" placeholder="********" />
+                  </div>
+                  <div>
+                    <label class="form-label">Kata Laluan Baharu</label>
+                    <input type="password" class="form-input" placeholder="********" />
+                  </div>
+                  <div>
+                    <label class="form-label">Sahkan Kata Laluan</label>
+                    <input type="password" class="form-input" placeholder="********" />
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="flex items-center justify-end gap-3 border-t border-gray-200 pt-6 dark:border-gray-700"
+              >
+                <button type="button" class="btn-secondary">Batal</button>
+                <button type="submit" class="btn-primary">
+                  <i data-lucide="save" class="h-4 w-4"></i>
+                  Simpan Perubahan
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pindaan Lesen — e-Lesen MPOB</title>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div id="sidebar"></div>
+
+    <div class="lg:pl-64">
+      <div id="header"></div>
+
+      <main class="p-4 lg:p-6">
+        <div class="mb-6">
+          <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Pindaan Lesen</h1>
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+            Mohon pindaan ke atas butiran lesen sedia ada
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 xl:grid-cols-3">
+          <!-- Form -->
+          <div class="space-y-6 xl:col-span-2">
+            <!-- Select License -->
+            <div class="card">
+              <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">Pilih Lesen</h2>
+              <select class="form-input">
+                <option value="">-- Pilih lesen untuk dipinda --</option>
+                <option selected>KPB-2024-1234 — Kilang Pemprosesan (Tamat: 15/06/2026)</option>
+                <option>KPB-2024-1235 — Peniaga (Tamat: 31/12/2026)</option>
+                <option>KPB-2024-1236 — Pengeksport (Tamat: 31/12/2026)</option>
+                <option>KPB-2023-0987 — Pengimport (Tamat: 30/09/2026)</option>
+              </select>
+            </div>
+
+            <!-- Amendment Type -->
+            <div class="card">
+              <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+                Jenis Pindaan
+              </h2>
+              <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                <label
+                  class="flex items-center gap-2 rounded-lg border border-primary/30 bg-primary/5 p-3 text-sm text-gray-700 dark:border-primary-light/30 dark:bg-primary-light/10 dark:text-gray-300"
+                >
+                  <input
+                    type="checkbox"
+                    checked
+                    class="rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                  />
+                  Perubahan alamat premis
+                </label>
+                <label
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 p-3 text-sm text-gray-700 dark:border-gray-700 dark:text-gray-300"
+                >
+                  <input
+                    type="checkbox"
+                    class="rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                  />
+                  Perubahan nama syarikat
+                </label>
+                <label
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 p-3 text-sm text-gray-700 dark:border-gray-700 dark:text-gray-300"
+                >
+                  <input
+                    type="checkbox"
+                    class="rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                  />
+                  Perubahan pengarah/pemegang saham
+                </label>
+                <label
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 p-3 text-sm text-gray-700 dark:border-gray-700 dark:text-gray-300"
+                >
+                  <input
+                    type="checkbox"
+                    class="rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                  />
+                  Tambah/ubah aktiviti berlesen
+                </label>
+                <label
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 p-3 text-sm text-gray-700 dark:border-gray-700 dark:text-gray-300"
+                >
+                  <input
+                    type="checkbox"
+                    class="rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                  />
+                  Perubahan daya pemprosesan
+                </label>
+                <label
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 p-3 text-sm text-gray-700 dark:border-gray-700 dark:text-gray-300"
+                >
+                  <input
+                    type="checkbox"
+                    class="rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                  />
+                  Lain-lain
+                </label>
+              </div>
+            </div>
+
+            <!-- Amendment Details -->
+            <div class="card">
+              <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+                Butiran Pindaan
+              </h2>
+              <form class="space-y-4" onsubmit="return false">
+                <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+                  <div
+                    class="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800/50"
+                  >
+                    <h3 class="mb-3 text-sm font-semibold text-gray-500 dark:text-gray-400">
+                      Maklumat Semasa
+                    </h3>
+                    <div class="space-y-2">
+                      <div>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">Alamat Premis</p>
+                        <p class="text-sm text-gray-900 dark:text-white">
+                          Lot 456, Jalan Perindustrian, Kawasan Perindustrian Teluk Kalong, 24000
+                          Kemaman, Terengganu
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="rounded-lg border border-primary/30 bg-primary/5 p-4 dark:border-primary-light/30 dark:bg-primary-light/10"
+                  >
+                    <h3 class="mb-3 text-sm font-semibold text-primary dark:text-primary-light">
+                      Maklumat Baharu
+                    </h3>
+                    <div class="space-y-2">
+                      <div>
+                        <label class="form-label">Alamat Premis Baharu</label>
+                        <textarea
+                          class="form-input"
+                          rows="3"
+                          placeholder="Masukkan alamat baharu..."
+                        >
+Lot 789, Jalan Perindustrian 5, Kawasan Perindustrian Gebeng, 26080 Kuantan, Pahang</textarea
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="form-label">Sebab Pindaan</label>
+                  <textarea
+                    class="form-input"
+                    rows="3"
+                    placeholder="Nyatakan sebab pindaan dipohon..."
+                  >
+Syarikat telah berpindah ke premis baharu di Gebeng, Kuantan untuk meningkatkan kapasiti pemprosesan.</textarea
+                  >
+                </div>
+
+                <!-- Document Upload -->
+                <div>
+                  <label class="form-label">Dokumen Sokongan</label>
+                  <div
+                    class="flex items-center justify-center rounded-lg border-2 border-dashed border-gray-300 px-6 py-6 dark:border-gray-600"
+                  >
+                    <div class="text-center">
+                      <i data-lucide="upload" class="mx-auto mb-2 h-8 w-8 text-gray-400"></i>
+                      <p class="text-sm text-gray-600 dark:text-gray-400">
+                        Seret dan lepas fail, atau
+                        <button
+                          type="button"
+                          class="font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                        >
+                          pilih fail
+                        </button>
+                      </p>
+                      <p class="mt-1 text-xs text-gray-400">
+                        Surat rasmi perubahan, dokumen sokongan (PDF, JPG, PNG — maks. 10MB)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Declaration -->
+                <div
+                  class="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800/50"
+                >
+                  <label class="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                    <input
+                      type="checkbox"
+                      class="mt-0.5 rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                    />
+                    Saya mengesahkan bahawa semua maklumat pindaan yang diberikan adalah benar dan
+                    tepat.
+                  </label>
+                </div>
+
+                <div
+                  class="flex items-center justify-end gap-3 border-t border-gray-200 pt-6 dark:border-gray-700"
+                >
+                  <button type="button" class="btn-secondary">
+                    <i data-lucide="save" class="h-4 w-4"></i>
+                    Simpan Draf
+                  </button>
+                  <button type="submit" class="btn-primary">
+                    <i data-lucide="send" class="h-4 w-4"></i>
+                    Hantar Permohonan Pindaan
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="space-y-6">
+            <!-- Current License -->
+            <div class="card">
+              <h3
+                class="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400"
+              >
+                Lesen Dipilih
+              </h3>
+              <dl class="space-y-3">
+                <div>
+                  <dt class="text-xs text-gray-500 dark:text-gray-400">No. Lesen</dt>
+                  <dd class="text-sm font-medium text-gray-900 dark:text-white">KPB-2024-1234</dd>
+                </div>
+                <div>
+                  <dt class="text-xs text-gray-500 dark:text-gray-400">Kategori</dt>
+                  <dd class="text-sm text-gray-900 dark:text-white">Kilang Pemprosesan</dd>
+                </div>
+                <div>
+                  <dt class="text-xs text-gray-500 dark:text-gray-400">Status</dt>
+                  <dd><span class="badge bg-warning/10 text-warning">Akan Tamat</span></dd>
+                </div>
+                <div>
+                  <dt class="text-xs text-gray-500 dark:text-gray-400">Tarikh Tamat</dt>
+                  <dd class="text-sm text-gray-900 dark:text-white">15/06/2026</dd>
+                </div>
+              </dl>
+            </div>
+
+            <!-- Fee -->
+            <div class="card">
+              <h3
+                class="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400"
+              >
+                Anggaran Bayaran
+              </h3>
+              <dl class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <dt class="text-sm text-gray-600 dark:text-gray-400">Yuran Pindaan</dt>
+                  <dd class="text-sm font-medium text-gray-900 dark:text-white">RM 200.00</dd>
+                </div>
+                <div class="flex items-center justify-between">
+                  <dt class="text-sm text-gray-600 dark:text-gray-400">Caj Pemprosesan</dt>
+                  <dd class="text-sm font-medium text-gray-900 dark:text-white">RM 50.00</dd>
+                </div>
+                <div
+                  class="flex items-center justify-between border-t border-gray-200 pt-3 dark:border-gray-700"
+                >
+                  <dt class="text-sm font-semibold text-gray-900 dark:text-white">Jumlah</dt>
+                  <dd class="text-sm font-bold text-gray-900 dark:text-white">RM 250.00</dd>
+                </div>
+              </dl>
+            </div>
+
+            <!-- Amendment History -->
+            <div class="card">
+              <h3
+                class="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400"
+              >
+                Sejarah Pindaan
+              </h3>
+              <div class="space-y-3">
+                <div class="border-l-2 border-accent pl-3">
+                  <p class="text-xs text-gray-500 dark:text-gray-400">05/01/2025</p>
+                  <p class="text-sm text-gray-700 dark:text-gray-300">
+                    Pertukaran pengarah — Diluluskan
+                  </p>
+                </div>
+                <div class="border-l-2 border-accent pl-3">
+                  <p class="text-xs text-gray-500 dark:text-gray-400">20/06/2024</p>
+                  <p class="text-sm text-gray-700 dark:text-gray-300">
+                    Tambah aktiviti — Diluluskan
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

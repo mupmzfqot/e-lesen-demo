@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Status Permohonan — e-Lesen MPOB</title>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div id="sidebar"></div>
+
+    <div class="lg:pl-64">
+      <div id="header"></div>
+
+      <main class="p-4 lg:p-6">
+        <div class="mb-6">
+          <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Status Permohonan</h1>
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Jejak status permohonan anda</p>
+        </div>
+
+        <!-- Search -->
+        <div class="card mb-6">
+          <div class="flex flex-col gap-4 sm:flex-row">
+            <div class="flex-1">
+              <div class="relative">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+                  <i data-lucide="search" class="h-4 w-4"></i>
+                </span>
+                <input
+                  type="text"
+                  class="form-input pl-10"
+                  placeholder="Cari No. Rujukan..."
+                  value="LN-2026-0851"
+                />
+              </div>
+            </div>
+            <button type="button" class="btn-primary">
+              <i data-lucide="search" class="h-4 w-4"></i>
+              Cari
+            </button>
+          </div>
+        </div>
+
+        <!-- Application Detail -->
+        <div class="mb-6 grid grid-cols-1 gap-6 xl:grid-cols-3">
+          <!-- Timeline -->
+          <div class="card xl:col-span-2">
+            <h2 class="mb-6 text-lg font-semibold text-gray-900 dark:text-white">
+              Perjalanan Permohonan — LN-2026-0851
+            </h2>
+            <div class="relative ml-4 border-l-2 border-gray-200 pl-8 dark:border-gray-700">
+              <!-- Step 1: Completed -->
+              <div class="relative mb-8">
+                <div
+                  class="absolute -left-[2.55rem] flex h-6 w-6 items-center justify-center rounded-full bg-accent text-white"
+                >
+                  <i data-lucide="check" class="h-3 w-3"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-gray-900 dark:text-white">
+                    Permohonan Dihantar
+                  </p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">10/03/2026, 09:15 AM</p>
+                  <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                    Permohonan lesen baharu kilang pemprosesan telah berjaya dihantar.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 2: Completed -->
+              <div class="relative mb-8">
+                <div
+                  class="absolute -left-[2.55rem] flex h-6 w-6 items-center justify-center rounded-full bg-accent text-white"
+                >
+                  <i data-lucide="check" class="h-3 w-3"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-gray-900 dark:text-white">Semakan Dokumen</p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">11/03/2026, 02:30 PM</p>
+                  <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                    Dokumen telah disemak dan didapati lengkap.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 3: In Progress -->
+              <div class="relative mb-8">
+                <div
+                  class="absolute -left-[2.55rem] flex h-6 w-6 items-center justify-center rounded-full bg-info text-white"
+                >
+                  <i data-lucide="loader" class="h-3 w-3"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-info">Dalam Semakan Pegawai</p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">14/03/2026, 10:00 AM</p>
+                  <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                    Permohonan sedang disemak oleh pegawai pemproses. Dijangka selesai dalam 3 hari
+                    bekerja.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 4: Pending -->
+              <div class="relative mb-8">
+                <div
+                  class="absolute -left-[2.55rem] flex h-6 w-6 items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700"
+                >
+                  <span class="h-2 w-2 rounded-full bg-gray-400"></span>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-gray-400 dark:text-gray-500">
+                    Penilaian Tapak
+                  </p>
+                  <p class="text-xs text-gray-400 dark:text-gray-500">Belum dijadualkan</p>
+                </div>
+              </div>
+
+              <!-- Step 5: Pending -->
+              <div class="relative mb-8">
+                <div
+                  class="absolute -left-[2.55rem] flex h-6 w-6 items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700"
+                >
+                  <span class="h-2 w-2 rounded-full bg-gray-400"></span>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-gray-400 dark:text-gray-500">Kelulusan</p>
+                  <p class="text-xs text-gray-400 dark:text-gray-500">Menunggu semakan selesai</p>
+                </div>
+              </div>
+
+              <!-- Step 6: Pending -->
+              <div class="relative">
+                <div
+                  class="absolute -left-[2.55rem] flex h-6 w-6 items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700"
+                >
+                  <span class="h-2 w-2 rounded-full bg-gray-400"></span>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-gray-400 dark:text-gray-500">Cetakan Lesen</p>
+                  <p class="text-xs text-gray-400 dark:text-gray-500">Menunggu kelulusan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Application Info -->
+          <div class="space-y-6">
+            <div class="card">
+              <h3
+                class="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400"
+              >
+                Maklumat Permohonan
+              </h3>
+              <dl class="space-y-3">
+                <div>
+                  <dt class="text-xs text-gray-500 dark:text-gray-400">No. Rujukan</dt>
+                  <dd class="text-sm font-medium text-gray-900 dark:text-white">LN-2026-0851</dd>
+                </div>
+                <div>
+                  <dt class="text-xs text-gray-500 dark:text-gray-400">Jenis</dt>
+                  <dd class="text-sm text-gray-700 dark:text-gray-300">
+                    Lesen Baharu — Kilang Pemprosesan
+                  </dd>
+                </div>
+                <div>
+                  <dt class="text-xs text-gray-500 dark:text-gray-400">Tarikh Hantar</dt>
+                  <dd class="text-sm text-gray-700 dark:text-gray-300">10/03/2026</dd>
+                </div>
+                <div>
+                  <dt class="text-xs text-gray-500 dark:text-gray-400">Status</dt>
+                  <dd><span class="badge bg-info/10 text-info">Dalam Semakan</span></dd>
+                </div>
+                <div>
+                  <dt class="text-xs text-gray-500 dark:text-gray-400">Pegawai Bertanggungjawab</dt>
+                  <dd class="text-sm text-gray-700 dark:text-gray-300">
+                    Ahmad Razak bin Mohd Noor
+                  </dd>
+                </div>
+              </dl>
+            </div>
+
+            <!-- Document Checklist -->
+            <div class="card">
+              <h3
+                class="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400"
+              >
+                Senarai Dokumen
+              </h3>
+              <ul class="space-y-2">
+                <li class="flex items-center gap-2 text-sm">
+                  <i data-lucide="check-circle" class="h-4 w-4 text-accent"></i>
+                  <span class="text-gray-700 dark:text-gray-300">Borang permohonan</span>
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <i data-lucide="check-circle" class="h-4 w-4 text-accent"></i>
+                  <span class="text-gray-700 dark:text-gray-300">Sijil pendaftaran SSM</span>
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <i data-lucide="check-circle" class="h-4 w-4 text-accent"></i>
+                  <span class="text-gray-700 dark:text-gray-300">Pelan tapak premis</span>
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <i data-lucide="check-circle" class="h-4 w-4 text-accent"></i>
+                  <span class="text-gray-700 dark:text-gray-300">Surat kelulusan PBT</span>
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <i data-lucide="check-circle" class="h-4 w-4 text-accent"></i>
+                  <span class="text-gray-700 dark:text-gray-300">Laporan EIA</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

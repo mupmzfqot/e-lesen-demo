@@ -1,0 +1,113 @@
+<!-- Overlay for mobile -->
+<div id="sidebar-overlay" class="fixed inset-0 z-30 hidden bg-black/50 lg:hidden"></div>
+
+<aside class="fixed inset-y-0 left-0 z-40 flex w-64 -translate-x-full flex-col border-r border-gray-200 bg-white transition-transform lg:translate-x-0 dark:border-gray-700 dark:bg-gray-900">
+  <!-- Logo -->
+  <div class="flex h-16 items-center gap-3 border-b border-gray-200 px-4 dark:border-gray-700">
+    <img src="/assets/logo/logo.png" alt="MPOB Logo" class="h-9 w-9 object-contain" />
+    <div>
+      <span class="text-sm font-bold text-gray-900 dark:text-white">e-Lesen MPOB</span>
+      <p class="text-xs text-gray-500 dark:text-gray-400">Pegawai Pemproses</p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="flex-1 overflow-y-auto px-3 py-4">
+    <p class="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">Utama</p>
+    <ul class="mb-4 space-y-1">
+      <li>
+        <a href="/pegawai/dashboard.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+          <i data-lucide="layout-dashboard" class="h-4 w-4"></i>
+          Dashboard
+        </a>
+      </li>
+    </ul>
+
+    <p class="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">Pemprosesan</p>
+    <ul class="mb-4 space-y-1">
+      <li>
+        <a href="/pegawai/senarai-permohonan.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+          <i data-lucide="list" class="h-4 w-4"></i>
+          Senarai Permohonan
+        </a>
+      </li>
+      <li>
+        <a href="/pegawai/semakan-permohonan.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+          <i data-lucide="clipboard-check" class="h-4 w-4"></i>
+          Semakan Permohonan
+        </a>
+      </li>
+      <li>
+        <a href="/pegawai/penilaian-tapak.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+          <i data-lucide="map-pin" class="h-4 w-4"></i>
+          Penilaian Tapak
+        </a>
+      </li>
+    </ul>
+
+    <p class="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">Pemantauan</p>
+    <ul class="mb-4 space-y-1">
+      <li>
+        <a href="/pegawai/e-pemantauan.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+          <i data-lucide="activity" class="h-4 w-4"></i>
+          e-Pemantauan
+        </a>
+      </li>
+      <li>
+        <a href="/pegawai/carian.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+          <i data-lucide="search" class="h-4 w-4"></i>
+          Carian Lesen
+        </a>
+      </li>
+    </ul>
+
+    <p class="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">Laporan</p>
+    <ul class="mb-4 space-y-1">
+      <li>
+        <a href="/pegawai/laporan.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+          <i data-lucide="bar-chart-3" class="h-4 w-4"></i>
+          Laporan & Statistik
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Role Switcher (Demo) -->
+  <div class="border-t border-gray-200 px-3 py-3 dark:border-gray-700">
+    <p class="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">Tukar Peranan</p>
+    <div class="space-y-1">
+      <a href="/admin/dashboard.html" class="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+        <i data-lucide="shield" class="h-3.5 w-3.5"></i>
+        Pentadbir
+      </a>
+      <a href="/pegawai/dashboard.html" class="flex items-center gap-2 rounded-lg bg-primary/10 px-3 py-1.5 text-sm font-medium text-primary transition-colors dark:bg-primary-light/20 dark:text-primary-light">
+        <i data-lucide="clipboard-check" class="h-3.5 w-3.5"></i>
+        Pegawai
+      </a>
+      <a href="/pemohon/dashboard.html" class="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+        <i data-lucide="file-plus" class="h-3.5 w-3.5"></i>
+        Pemohon
+      </a>
+      <a href="/pelesen/dashboard.html" class="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+        <i data-lucide="award" class="h-3.5 w-3.5"></i>
+        Pemegang Lesen
+      </a>
+    </div>
+  </div>
+
+  <!-- User -->
+  <div class="border-t border-gray-200 p-4 dark:border-gray-700">
+    <div class="flex items-center gap-3">
+      <div class="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-primary-light/20 dark:text-primary-light">
+        <i data-lucide="user" class="h-4 w-4"></i>
+      </div>
+      <div class="flex-1 truncate">
+        <p class="truncate text-sm font-medium text-gray-900 dark:text-white">Ahmad Razak bin Mohd Noor</p>
+        <p class="truncate text-xs text-gray-500 dark:text-gray-400">Pegawai Pemproses</p>
+      </div>
+      <a href="/index.html" class="text-gray-400 transition-colors hover:text-danger">
+        <i data-lucide="log-out" class="h-4 w-4"></i>
+      </a>
+    </div>
+  </div>
+</aside>
