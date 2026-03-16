@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Log Masuk — e-Lesen MPOB</title>
-    <script type="module" crossorigin src="/assets/index-CZ6u3cC4.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DVxhkbHg.css">
+    <script type="module" crossorigin src="/assets/main-i2sULGdO.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-BQ0zyMl4.css">
   </head>
   <body class="min-h-screen bg-gray-50 dark:bg-gray-950">
     <!-- Login page has NO sidebar/header — standalone layout -->
@@ -119,6 +119,73 @@
             Daftar di sini
           </a>
         </p>
+      </div>
+
+      <!-- Demo: Quick Role Access -->
+      <div class="mt-6 w-full max-w-md">
+        <p
+          class="mb-3 text-center text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500"
+        >
+          Demo — Masuk sebagai
+        </p>
+        <div class="grid grid-cols-2 gap-3">
+          <a
+            href="/admin/dashboard.html"
+            class="flex items-center gap-3 rounded-lg border border-gray-200 bg-white p-3 transition-colors hover:border-primary hover:bg-primary/5 dark:border-gray-700 dark:bg-gray-900 dark:hover:border-primary-light dark:hover:bg-primary-light/5"
+          >
+            <div
+              class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary-light/20 dark:text-primary-light"
+            >
+              <i data-lucide="shield" class="h-4 w-4"></i>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-gray-900 dark:text-white">Pentadbir</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">System Admin</p>
+            </div>
+          </a>
+          <a
+            href="/pegawai/dashboard.html"
+            class="flex items-center gap-3 rounded-lg border border-gray-200 bg-white p-3 transition-colors hover:border-info hover:bg-info/5 dark:border-gray-700 dark:bg-gray-900 dark:hover:border-info dark:hover:bg-info/5"
+          >
+            <div
+              class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-info/10 text-info"
+            >
+              <i data-lucide="clipboard-check" class="h-4 w-4"></i>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-gray-900 dark:text-white">Pegawai</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">Processing Officer</p>
+            </div>
+          </a>
+          <a
+            href="/pemohon/dashboard.html"
+            class="flex items-center gap-3 rounded-lg border border-gray-200 bg-white p-3 transition-colors hover:border-accent hover:bg-accent/5 dark:border-gray-700 dark:bg-gray-900 dark:hover:border-accent-light dark:hover:bg-accent-light/5"
+          >
+            <div
+              class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+            >
+              <i data-lucide="file-plus" class="h-4 w-4"></i>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-gray-900 dark:text-white">Pemohon</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">Applicant</p>
+            </div>
+          </a>
+          <a
+            href="/pelesen/dashboard.html"
+            class="flex items-center gap-3 rounded-lg border border-gray-200 bg-white p-3 transition-colors hover:border-warning hover:bg-warning/5 dark:border-gray-700 dark:bg-gray-900 dark:hover:border-warning dark:hover:bg-warning/5"
+          >
+            <div
+              class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-warning/10 text-warning"
+            >
+              <i data-lucide="award" class="h-4 w-4"></i>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-gray-900 dark:text-white">Pemegang Lesen</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">License Holder</p>
+            </div>
+          </a>
+        </div>
       </div>
 
       <!-- Announcements -->
