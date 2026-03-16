@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laporan Pegawai — e-Lesen MPOB</title>
+    <script type="module" crossorigin src="/assets/main-HAbphAFF.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-CXxVRoza.css">
+  </head>
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div id="sidebar"></div>
+
+    <div class="lg:pl-64">
+      <div id="header"></div>
+
+      <main class="p-4 lg:p-6">
+        <div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Laporan</h1>
+            <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+              Laporan prestasi dan ringkasan pemprosesan
+            </p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button type="button" class="btn-secondary">
+              <i data-lucide="download" class="h-4 w-4"></i>
+              Eksport PDF
+            </button>
+            <button type="button" class="btn-secondary">
+              <i data-lucide="file-spreadsheet" class="h-4 w-4"></i>
+              Eksport Excel
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter -->
+        <div class="card mb-6">
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <div>
+              <label class="form-label">Jenis Laporan</label>
+              <select class="form-input">
+                <option selected>Ringkasan Pemprosesan</option>
+                <option>Prestasi KPI</option>
+                <option>Laporan Pemantauan</option>
+                <option>Statistik Permohonan</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label">Dari Tarikh</label>
+              <input type="date" class="form-input" value="2026-01-01" />
+            </div>
+            <div>
+              <label class="form-label">Hingga Tarikh</label>
+              <input type="date" class="form-input" value="2026-03-16" />
+            </div>
+          </div>
+        </div>
+
+        <!-- My Performance Stats -->
+        <div class="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary-light/20 dark:text-primary-light"
+            >
+              <i data-lucide="file-check" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Diproses</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">45</p>
+              <p class="text-xs text-accent dark:text-accent-light">+8 dari bulan lepas</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+            >
+              <i data-lucide="check-circle" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Diluluskan</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">38</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">84.4% kadar kelulusan</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-info/10 text-info"
+            >
+              <i data-lucide="clock" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Purata Masa</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">6.8</p>
+              <p class="text-xs text-accent dark:text-accent-light">hari — dalam KPI</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+            >
+              <i data-lucide="trophy" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Pencapaian KPI</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">95%</p>
+              <p class="text-xs text-accent dark:text-accent-light">Cemerlang</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 xl:grid-cols-2">
+          <!-- Monthly Processing Chart Placeholder -->
+          <div class="card">
+            <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+              Trend Pemprosesan Bulanan
+            </h2>
+            <div
+              class="flex h-64 items-center justify-center rounded-lg border-2 border-dashed border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-800/50"
+            >
+              <div class="text-center text-gray-400 dark:text-gray-500">
+                <i data-lucide="bar-chart-3" class="mx-auto mb-2 h-10 w-10"></i>
+                <p class="text-sm">Carta trend pemprosesan</p>
+                <p class="text-xs">Jan — Mac 2026</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Processing by Type -->
+          <div class="card">
+            <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+              Pemprosesan Mengikut Jenis
+            </h2>
+            <div class="space-y-3">
+              <div>
+                <div class="mb-1 flex items-center justify-between text-sm">
+                  <span class="text-gray-700 dark:text-gray-300">Lesen Baharu</span>
+                  <span class="font-medium text-gray-900 dark:text-white">18</span>
+                </div>
+                <div class="h-2 rounded-full bg-gray-200 dark:bg-gray-700">
+                  <div class="h-2 rounded-full bg-primary" style="width: 40%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="mb-1 flex items-center justify-between text-sm">
+                  <span class="text-gray-700 dark:text-gray-300">Pembaharuan</span>
+                  <span class="font-medium text-gray-900 dark:text-white">15</span>
+                </div>
+                <div class="h-2 rounded-full bg-gray-200 dark:bg-gray-700">
+                  <div class="h-2 rounded-full bg-accent" style="width: 33%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="mb-1 flex items-center justify-between text-sm">
+                  <span class="text-gray-700 dark:text-gray-300">Pindaan</span>
+                  <span class="font-medium text-gray-900 dark:text-white">8</span>
+                </div>
+                <div class="h-2 rounded-full bg-gray-200 dark:bg-gray-700">
+                  <div class="h-2 rounded-full bg-info" style="width: 18%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="mb-1 flex items-center justify-between text-sm">
+                  <span class="text-gray-700 dark:text-gray-300">Pembatalan</span>
+                  <span class="font-medium text-gray-900 dark:text-white">4</span>
+                </div>
+                <div class="h-2 rounded-full bg-gray-200 dark:bg-gray-700">
+                  <div class="h-2 rounded-full bg-danger" style="width: 9%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Completed -->
+          <div class="card xl:col-span-2">
+            <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+              Permohonan Terkini Selesai
+            </h2>
+            <div class="overflow-x-auto">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>No. Rujukan</th>
+                    <th>Pemohon</th>
+                    <th>Jenis</th>
+                    <th>Tarikh Terima</th>
+                    <th>Tarikh Selesai</th>
+                    <th>Masa (Hari)</th>
+                    <th>Keputusan</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="font-medium text-gray-900 dark:text-white">LN-2026-0840</td>
+                    <td>Syarikat Sawit Timur Sdn Bhd</td>
+                    <td class="text-sm text-gray-600 dark:text-gray-400">Lesen Baharu</td>
+                    <td class="whitespace-nowrap">02/03/2026</td>
+                    <td class="whitespace-nowrap">14/03/2026</td>
+                    <td>
+                      <span
+                        class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                        >8 hari</span
+                      >
+                    </td>
+                    <td>
+                      <span
+                        class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                        >Lulus</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="font-medium text-gray-900 dark:text-white">PB-2026-0215</td>
+                    <td>Palm Oil Industries Bhd</td>
+                    <td class="text-sm text-gray-600 dark:text-gray-400">Pembaharuan</td>
+                    <td class="whitespace-nowrap">05/03/2026</td>
+                    <td class="whitespace-nowrap">12/03/2026</td>
+                    <td>
+                      <span
+                        class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                        >5 hari</span
+                      >
+                    </td>
+                    <td>
+                      <span
+                        class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                        >Lulus</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="font-medium text-gray-900 dark:text-white">LN-2026-0838</td>
+                    <td>Kilang Minyak Harapan</td>
+                    <td class="text-sm text-gray-600 dark:text-gray-400">Lesen Baharu</td>
+                    <td class="whitespace-nowrap">28/02/2026</td>
+                    <td class="whitespace-nowrap">15/03/2026</td>
+                    <td>
+                      <span class="badge bg-warning/10 text-warning">11 hari</span>
+                    </td>
+                    <td>
+                      <span class="badge bg-danger/10 text-danger">Tolak</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="font-medium text-gray-900 dark:text-white">PI-2026-0102</td>
+                    <td>Minyak Sejati Trading</td>
+                    <td class="text-sm text-gray-600 dark:text-gray-400">Pindaan</td>
+                    <td class="whitespace-nowrap">01/03/2026</td>
+                    <td class="whitespace-nowrap">10/03/2026</td>
+                    <td>
+                      <span
+                        class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                        >7 hari</span
+                      >
+                    </td>
+                    <td>
+                      <span
+                        class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                        >Lulus</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+  </body>
+</html>

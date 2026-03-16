@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pendaftaran Akaun — e-Lesen MPOB</title>
+    <script type="module" crossorigin src="/assets/main-HAbphAFF.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-CXxVRoza.css">
+  </head>
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <!-- Registration page has NO sidebar/header — standalone layout -->
+    <div class="flex min-h-screen flex-col items-center justify-center px-4 py-12">
+      <!-- Logo & Title -->
+      <div class="mb-8 text-center">
+        <img
+          src="/assets/logo-DwfCtdk6.png"
+          alt="MPOB Logo"
+          class="mx-auto mb-4 h-16 w-16 object-contain"
+        />
+        <h1 class="text-2xl font-bold text-gray-900 dark:text-white">e-Lesen MPOB</h1>
+        <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+          Pendaftaran Akaun Pemohon Baharu
+        </p>
+      </div>
+
+      <!-- Registration Form -->
+      <div class="w-full max-w-lg">
+        <div class="card">
+          <h2 class="mb-6 text-lg font-semibold text-gray-900 dark:text-white">
+            Maklumat Pendaftaran
+          </h2>
+          <form class="space-y-4" onsubmit="return false">
+            <!-- Account Type -->
+            <div>
+              <label class="form-label">Jenis Akaun</label>
+              <div class="grid grid-cols-2 gap-3">
+                <label
+                  class="flex cursor-pointer items-center gap-3 rounded-lg border border-primary bg-primary/5 p-3 dark:border-primary-light dark:bg-primary-light/10"
+                >
+                  <input
+                    type="radio"
+                    name="jenis-akaun"
+                    value="individu"
+                    checked
+                    class="text-primary focus:ring-primary"
+                  />
+                  <div>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">Individu</p>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Perseorangan</p>
+                  </div>
+                </label>
+                <label
+                  class="flex cursor-pointer items-center gap-3 rounded-lg border border-gray-200 p-3 hover:border-primary dark:border-gray-700"
+                >
+                  <input
+                    type="radio"
+                    name="jenis-akaun"
+                    value="syarikat"
+                    class="text-primary focus:ring-primary"
+                  />
+                  <div>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">Syarikat</p>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Entiti perniagaan</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Personal Info -->
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div class="sm:col-span-2">
+                <label class="form-label">Nama Penuh (seperti dalam KP)</label>
+                <input type="text" class="form-input" placeholder="Nama penuh anda" required />
+              </div>
+              <div>
+                <label class="form-label">No. Kad Pengenalan</label>
+                <input type="text" class="form-input" placeholder="cth: 850101-01-1234" required />
+              </div>
+              <div>
+                <label class="form-label">No. Telefon</label>
+                <input type="tel" class="form-input" placeholder="cth: 012-3456789" required />
+              </div>
+              <div class="sm:col-span-2">
+                <label class="form-label">Alamat E-mel</label>
+                <input type="email" class="form-input" placeholder="emel@contoh.com" required />
+              </div>
+            </div>
+
+            <!-- Company Info (shown for Syarikat type) -->
+            <div class="rounded-lg border border-gray-200 p-4 dark:border-gray-700">
+              <h3 class="mb-3 text-sm font-semibold text-gray-900 dark:text-white">
+                Maklumat Syarikat
+              </h3>
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div class="sm:col-span-2">
+                  <label class="form-label">Nama Syarikat</label>
+                  <input type="text" class="form-input" placeholder="Nama syarikat berdaftar" />
+                </div>
+                <div>
+                  <label class="form-label">No. Pendaftaran SSM</label>
+                  <input type="text" class="form-input" placeholder="cth: 200501012345" />
+                </div>
+                <div>
+                  <label class="form-label">No. Telefon Pejabat</label>
+                  <input type="tel" class="form-input" placeholder="cth: 07-1234567" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Password -->
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div>
+                <label class="form-label">Kata Laluan</label>
+                <input type="password" class="form-input" placeholder="Minimum 8 aksara" required />
+              </div>
+              <div>
+                <label class="form-label">Sahkan Kata Laluan</label>
+                <input
+                  type="password"
+                  class="form-input"
+                  placeholder="Masukkan semula kata laluan"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Password Requirements -->
+            <div class="rounded-lg bg-gray-50 p-3 dark:bg-gray-800/50">
+              <p class="mb-2 text-xs font-medium text-gray-700 dark:text-gray-300">
+                Keperluan kata laluan:
+              </p>
+              <ul class="space-y-1 text-xs text-gray-500 dark:text-gray-400">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="h-3 w-3 text-accent"></i>
+                  Minimum 8 aksara
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="h-3 w-3 text-accent"></i>
+                  Sekurang-kurangnya 1 huruf besar
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="h-3 w-3 text-accent"></i>
+                  Sekurang-kurangnya 1 nombor
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="h-3 w-3 text-accent"></i>
+                  Sekurang-kurangnya 1 aksara khas
+                </li>
+              </ul>
+            </div>
+
+            <!-- Terms -->
+            <label class="flex items-start gap-3">
+              <input
+                type="checkbox"
+                class="mt-0.5 rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                required
+              />
+              <span class="text-sm text-gray-600 dark:text-gray-400">
+                Saya bersetuju dengan
+                <a href="#" class="text-primary hover:underline dark:text-accent-light"
+                  >Terma & Syarat</a
+                >
+                dan
+                <a href="#" class="text-primary hover:underline dark:text-accent-light"
+                  >Dasar Privasi</a
+                >
+                e-Lesen MPOB.
+              </span>
+            </label>
+
+            <!-- Submit -->
+            <button type="submit" class="btn-primary w-full justify-center">
+              <i data-lucide="user-plus" class="h-4 w-4"></i>
+              Daftar Akaun
+            </button>
+          </form>
+
+          <!-- Login Link -->
+          <div class="mt-6 border-t border-gray-200 pt-4 text-center dark:border-gray-700">
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              Sudah mempunyai akaun?
+              <a
+                href="/index.html"
+                class="font-medium text-primary hover:underline dark:text-accent-light"
+                >Log Masuk</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <p class="mt-8 text-center text-xs text-gray-400 dark:text-gray-500">
+        &copy; 2026 Lembaga Minyak Sawit Malaysia (MPOB). Hak cipta terpelihara.
+      </p>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konfigurasi Workflow — e-Lesen MPOB</title>
+    <script type="module" crossorigin src="/assets/main-HAbphAFF.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-CXxVRoza.css">
+  </head>
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div id="sidebar"></div>
+
+    <div class="lg:pl-64">
+      <div id="header"></div>
+
+      <main class="p-4 lg:p-6">
+        <div class="mb-6">
+          <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Konfigurasi Workflow</h1>
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+            Tetapan aliran kerja pemprosesan permohonan
+          </p>
+        </div>
+
+        <!-- Workflow Selector -->
+        <div class="card mb-6">
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div>
+              <label class="form-label">Jenis Permohonan</label>
+              <select class="form-input">
+                <option selected>Lesen Baharu</option>
+                <option>Pembaharuan</option>
+                <option>Pindaan</option>
+                <option>Pembatalan</option>
+                <option>Tambahan Aktiviti</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label">Kategori Lesen</label>
+              <select class="form-input">
+                <option selected>Kilang Pemprosesan</option>
+                <option>Peniaga</option>
+                <option>Pengeksport</option>
+                <option>Pengimport</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Workflow Steps -->
+        <div class="card mb-6">
+          <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+            Aliran Kerja: Lesen Baharu — Kilang Pemprosesan
+          </h2>
+          <div class="space-y-4">
+            <!-- Step 1 -->
+            <div
+              class="flex items-start gap-4 rounded-lg border border-gray-200 p-4 dark:border-gray-700"
+            >
+              <div
+                class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white"
+              >
+                1
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
+                    Penerimaan Permohonan
+                  </h3>
+                  <span
+                    class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                    >Automatik</span
+                  >
+                </div>
+                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                  Permohonan diterima dan no. rujukan dijana secara automatik
+                </p>
+                <div class="mt-2 flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
+                  <span>Pelaksana: Sistem</span>
+                  <span>Sasaran: Segera</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div
+              class="flex items-start gap-4 rounded-lg border border-gray-200 p-4 dark:border-gray-700"
+            >
+              <div
+                class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white"
+              >
+                2
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
+                    Semakan Dokumen
+                  </h3>
+                  <span class="badge bg-info/10 text-info">Manual</span>
+                </div>
+                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                  Pegawai menyemak kelengkapan dokumen sokongan
+                </p>
+                <div class="mt-2 flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
+                  <span>Pelaksana: Pegawai Pemproses</span>
+                  <span>Sasaran: 3 hari</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div
+              class="flex items-start gap-4 rounded-lg border border-gray-200 p-4 dark:border-gray-700"
+            >
+              <div
+                class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white"
+              >
+                3
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
+                    Semakan Teknikal
+                  </h3>
+                  <span class="badge bg-info/10 text-info">Manual</span>
+                </div>
+                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                  Pegawai teknikal menyemak butiran permohonan dan kelayakan
+                </p>
+                <div class="mt-2 flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
+                  <span>Pelaksana: Pegawai Teknikal</span>
+                  <span>Sasaran: 3 hari</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div
+              class="flex items-start gap-4 rounded-lg border border-gray-200 p-4 dark:border-gray-700"
+            >
+              <div
+                class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white"
+              >
+                4
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
+                    Penilaian Tapak
+                  </h3>
+                  <span class="badge bg-info/10 text-info">Manual</span>
+                </div>
+                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                  Lawatan tapak untuk menilai premis dan peralatan
+                </p>
+                <div class="mt-2 flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
+                  <span>Pelaksana: Pegawai Penilai</span>
+                  <span>Sasaran: 5 hari</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div
+              class="flex items-start gap-4 rounded-lg border border-gray-200 p-4 dark:border-gray-700"
+            >
+              <div
+                class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white"
+              >
+                5
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-sm font-semibold text-gray-900 dark:text-white">Kelulusan</h3>
+                  <span class="badge bg-info/10 text-info">Manual</span>
+                </div>
+                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                  Keputusan akhir oleh Ketua Bahagian / Pengarah
+                </p>
+                <div class="mt-2 flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
+                  <span>Pelaksana: Ketua Bahagian</span>
+                  <span>Sasaran: 2 hari</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div
+              class="flex items-start gap-4 rounded-lg border border-gray-200 p-4 dark:border-gray-700"
+            >
+              <div
+                class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white"
+              >
+                6
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
+                    Cetakan & Penghantaran Lesen
+                  </h3>
+                  <span
+                    class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                    >Automatik</span
+                  >
+                </div>
+                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                  Lesen dijana dan dihantar secara digital kepada pemohon
+                </p>
+                <div class="mt-2 flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
+                  <span>Pelaksana: Sistem</span>
+                  <span>Sasaran: 1 hari</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mt-4 flex items-center justify-end gap-3 border-t border-gray-200 pt-4 dark:border-gray-700"
+          >
+            <button type="button" class="btn-secondary">
+              <i data-lucide="plus" class="h-4 w-4"></i>
+              Tambah Langkah
+            </button>
+            <button type="button" class="btn-primary">
+              <i data-lucide="save" class="h-4 w-4"></i>
+              Simpan Workflow
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+  </body>
+</html>
