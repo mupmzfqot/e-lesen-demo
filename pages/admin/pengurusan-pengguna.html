@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengurusan Pengguna — e-Lesen MPOB</title>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div id="sidebar"></div>
+
+    <div class="lg:pl-64">
+      <div id="header"></div>
+
+      <main class="p-4 lg:p-6">
+        <div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Pengurusan Pengguna</h1>
+            <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+              Urus akaun pengguna, peranan dan kebenaran akses
+            </p>
+          </div>
+          <button type="button" class="btn-primary">
+            <i data-lucide="user-plus" class="h-4 w-4"></i>
+            Tambah Pengguna
+          </button>
+        </div>
+
+        <!-- Stats -->
+        <div class="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary-light/20 dark:text-primary-light"
+            >
+              <i data-lucide="users" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Jumlah Pengguna</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">1,247</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+            >
+              <i data-lucide="user-check" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Aktif</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">1,182</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-warning/10 text-warning"
+            >
+              <i data-lucide="user-x" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Tidak Aktif</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">65</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-info/10 text-info"
+            >
+              <i data-lucide="clock" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Menunggu Pengesahan</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">12</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="card mb-6">
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <label class="form-label">Carian</label>
+              <div class="relative">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+                  <i data-lucide="search" class="h-4 w-4"></i>
+                </span>
+                <input type="text" class="form-input pl-10" placeholder="Nama / emel / ID..." />
+              </div>
+            </div>
+            <div>
+              <label class="form-label">Peranan</label>
+              <select class="form-input">
+                <option value="">Semua</option>
+                <option>Pentadbir</option>
+                <option>Pegawai</option>
+                <option>Pemohon</option>
+                <option>Pemegang Lesen</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label">Status</label>
+              <select class="form-input">
+                <option value="">Semua</option>
+                <option>Aktif</option>
+                <option>Tidak Aktif</option>
+                <option>Digantung</option>
+                <option>Menunggu Pengesahan</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label">Tarikh Daftar</label>
+              <select class="form-input">
+                <option>Semua</option>
+                <option>7 hari lepas</option>
+                <option>30 hari lepas</option>
+                <option>3 bulan lepas</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- User Table -->
+        <div class="card">
+          <div class="overflow-x-auto">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nama</th>
+                  <th>Emel</th>
+                  <th>Peranan</th>
+                  <th>Tarikh Daftar</th>
+                  <th>Log Masuk Terakhir</th>
+                  <th>Status</th>
+                  <th>Tindakan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    USR-001
+                  </td>
+                  <td>Ahmad bin Ali</td>
+                  <td>ahmad@mpob.gov.my</td>
+                  <td>
+                    <span
+                      class="badge bg-primary/10 text-primary dark:bg-primary-light/20 dark:text-primary-light"
+                      >Pentadbir</span
+                    >
+                  </td>
+                  <td class="whitespace-nowrap">01/01/2024</td>
+                  <td class="whitespace-nowrap">16/03/2026</td>
+                  <td>
+                    <span
+                      class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                      >Aktif</span
+                    >
+                  </td>
+                  <td>
+                    <div class="flex items-center gap-2">
+                      <button
+                        type="button"
+                        class="text-sm text-primary hover:text-primary-light dark:text-accent-light"
+                      >
+                        Ubah
+                      </button>
+                      <span class="text-gray-300 dark:text-gray-600">|</span>
+                      <button type="button" class="text-sm text-danger hover:underline">
+                        Nyahaktif
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    USR-002
+                  </td>
+                  <td>Ahmad Razak bin Mohd Noor</td>
+                  <td>razak@mpob.gov.my</td>
+                  <td><span class="badge bg-info/10 text-info">Pegawai</span></td>
+                  <td class="whitespace-nowrap">15/03/2024</td>
+                  <td class="whitespace-nowrap">16/03/2026</td>
+                  <td>
+                    <span
+                      class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                      >Aktif</span
+                    >
+                  </td>
+                  <td>
+                    <div class="flex items-center gap-2">
+                      <button
+                        type="button"
+                        class="text-sm text-primary hover:text-primary-light dark:text-accent-light"
+                      >
+                        Ubah
+                      </button>
+                      <span class="text-gray-300 dark:text-gray-600">|</span>
+                      <button type="button" class="text-sm text-danger hover:underline">
+                        Nyahaktif
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    USR-451
+                  </td>
+                  <td>Mohd Hafiz bin Ibrahim</td>
+                  <td>hafiz@sawitjaya.com</td>
+                  <td><span class="badge bg-warning/10 text-warning">Pemohon</span></td>
+                  <td class="whitespace-nowrap">15/01/2024</td>
+                  <td class="whitespace-nowrap">15/03/2026</td>
+                  <td>
+                    <span
+                      class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                      >Aktif</span
+                    >
+                  </td>
+                  <td>
+                    <div class="flex items-center gap-2">
+                      <button
+                        type="button"
+                        class="text-sm text-primary hover:text-primary-light dark:text-accent-light"
+                      >
+                        Ubah
+                      </button>
+                      <span class="text-gray-300 dark:text-gray-600">|</span>
+                      <button type="button" class="text-sm text-danger hover:underline">
+                        Nyahaktif
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    USR-234
+                  </td>
+                  <td>Tan Sri Ahmad Fauzi</td>
+                  <td>admin@palmoil.com.my</td>
+                  <td>
+                    <span
+                      class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                      >Pemegang Lesen</span
+                    >
+                  </td>
+                  <td class="whitespace-nowrap">20/06/2023</td>
+                  <td class="whitespace-nowrap">14/03/2026</td>
+                  <td>
+                    <span
+                      class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                      >Aktif</span
+                    >
+                  </td>
+                  <td>
+                    <div class="flex items-center gap-2">
+                      <button
+                        type="button"
+                        class="text-sm text-primary hover:text-primary-light dark:text-accent-light"
+                      >
+                        Ubah
+                      </button>
+                      <span class="text-gray-300 dark:text-gray-600">|</span>
+                      <button type="button" class="text-sm text-danger hover:underline">
+                        Nyahaktif
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    USR-1240
+                  </td>
+                  <td>Nurul Aisyah binti Kamal</td>
+                  <td>nurul@greenvalley.com</td>
+                  <td><span class="badge bg-warning/10 text-warning">Pemohon</span></td>
+                  <td class="whitespace-nowrap">10/03/2026</td>
+                  <td class="whitespace-nowrap">—</td>
+                  <td><span class="badge bg-info/10 text-info">Menunggu</span></td>
+                  <td>
+                    <div class="flex items-center gap-2">
+                      <button
+                        type="button"
+                        class="text-sm text-accent hover:underline dark:text-accent-light"
+                      >
+                        Sahkan
+                      </button>
+                      <span class="text-gray-300 dark:text-gray-600">|</span>
+                      <button type="button" class="text-sm text-danger hover:underline">
+                        Tolak
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Pagination -->
+          <div
+            class="mt-4 flex items-center justify-between border-t border-gray-200 pt-4 dark:border-gray-700"
+          >
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              Menunjukkan 1-5 daripada 1,247 rekod
+            </p>
+            <div class="flex items-center gap-1">
+              <button class="rounded-lg px-3 py-1.5 text-sm text-gray-400" disabled>Sebelum</button>
+              <button class="rounded-lg bg-primary px-3 py-1.5 text-sm text-white">1</button>
+              <button
+                class="rounded-lg px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+              >
+                2
+              </button>
+              <button
+                class="rounded-lg px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+              >
+                3
+              </button>
+              <span class="px-2 text-sm text-gray-400">...</span>
+              <button
+                class="rounded-lg px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+              >
+                250
+              </button>
+              <button
+                class="rounded-lg px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+              >
+                Seterusnya
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

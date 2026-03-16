@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carian Lesen — e-Lesen MPOB</title>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div id="sidebar"></div>
+
+    <div class="lg:pl-64">
+      <div id="header"></div>
+
+      <main class="p-4 lg:p-6">
+        <div class="mb-6">
+          <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Carian Lesen</h1>
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+            Cari dan semak maklumat lesen pemegang lesen
+          </p>
+        </div>
+
+        <!-- Search Form -->
+        <div class="card mb-6">
+          <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">Kriteria Carian</h2>
+          <form class="space-y-4" onsubmit="return false">
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <div>
+                <label class="form-label">No. Lesen</label>
+                <input type="text" class="form-input" placeholder="cth: KP-2024-0156" />
+              </div>
+              <div>
+                <label class="form-label">Nama Syarikat</label>
+                <input type="text" class="form-input" placeholder="Nama syarikat..." />
+              </div>
+              <div>
+                <label class="form-label">No. SSM / KP</label>
+                <input type="text" class="form-input" placeholder="No. pendaftaran..." />
+              </div>
+              <div>
+                <label class="form-label">Kategori Lesen</label>
+                <select class="form-input">
+                  <option value="">Semua kategori</option>
+                  <option>Kilang Pemprosesan</option>
+                  <option>Peniaga</option>
+                  <option>Pengeksport</option>
+                  <option>Pengimport</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label">Negeri</label>
+                <select class="form-input">
+                  <option value="">Semua negeri</option>
+                  <option>Johor</option>
+                  <option>Kedah</option>
+                  <option>Kelantan</option>
+                  <option>Melaka</option>
+                  <option>Negeri Sembilan</option>
+                  <option>Pahang</option>
+                  <option>Perak</option>
+                  <option>Perlis</option>
+                  <option>Pulau Pinang</option>
+                  <option>Sabah</option>
+                  <option>Sarawak</option>
+                  <option>Selangor</option>
+                  <option>Terengganu</option>
+                  <option>W.P. Kuala Lumpur</option>
+                  <option>W.P. Labuan</option>
+                  <option>W.P. Putrajaya</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label">Status Lesen</label>
+                <select class="form-input">
+                  <option value="">Semua status</option>
+                  <option>Aktif</option>
+                  <option>Tamat Tempoh</option>
+                  <option>Digantung</option>
+                  <option>Dibatalkan</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label">Tarikh Mula</label>
+                <input type="date" class="form-input" />
+              </div>
+              <div>
+                <label class="form-label">Tarikh Akhir</label>
+                <input type="date" class="form-input" />
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <button type="submit" class="btn-primary">
+                <i data-lucide="search" class="h-4 w-4"></i>
+                Cari
+              </button>
+              <button type="reset" class="btn-secondary">
+                <i data-lucide="rotate-ccw" class="h-4 w-4"></i>
+                Set Semula
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Search Results -->
+        <div class="card">
+          <div class="mb-4 flex items-center justify-between">
+            <h2 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Hasil Carian
+              <span class="ml-2 text-sm font-normal text-gray-500 dark:text-gray-400"
+                >(12 rekod dijumpai)</span
+              >
+            </h2>
+            <button type="button" class="btn-secondary">
+              <i data-lucide="download" class="h-4 w-4"></i>
+              Eksport
+            </button>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>No. Lesen</th>
+                  <th>Pemegang Lesen</th>
+                  <th>Kategori</th>
+                  <th>Negeri</th>
+                  <th>Tarikh Mula</th>
+                  <th>Tarikh Tamat</th>
+                  <th>Status</th>
+                  <th>Tindakan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="font-medium text-gray-900 dark:text-white">KP-2024-0156</td>
+                  <td>Palm Oil Industries Bhd</td>
+                  <td class="text-sm text-gray-600 dark:text-gray-400">Kilang Pemprosesan</td>
+                  <td>Johor</td>
+                  <td class="whitespace-nowrap">01/01/2024</td>
+                  <td class="whitespace-nowrap">31/12/2026</td>
+                  <td>
+                    <span
+                      class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                      >Aktif</span
+                    >
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      class="text-sm text-primary hover:text-primary-light dark:text-accent-light"
+                    >
+                      Lihat
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="font-medium text-gray-900 dark:text-white">PN-2024-0234</td>
+                  <td>Minyak Sejati Trading</td>
+                  <td class="text-sm text-gray-600 dark:text-gray-400">Peniaga</td>
+                  <td>Pahang</td>
+                  <td class="whitespace-nowrap">15/03/2024</td>
+                  <td class="whitespace-nowrap">14/03/2027</td>
+                  <td>
+                    <span
+                      class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                      >Aktif</span
+                    >
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      class="text-sm text-primary hover:text-primary-light dark:text-accent-light"
+                    >
+                      Lihat
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="font-medium text-gray-900 dark:text-white">PK-2024-0312</td>
+                  <td>Syarikat Eksport Sawit Utara</td>
+                  <td class="text-sm text-gray-600 dark:text-gray-400">Pengeksport</td>
+                  <td>Perak</td>
+                  <td class="whitespace-nowrap">01/06/2024</td>
+                  <td class="whitespace-nowrap">31/05/2027</td>
+                  <td>
+                    <span
+                      class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                      >Aktif</span
+                    >
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      class="text-sm text-primary hover:text-primary-light dark:text-accent-light"
+                    >
+                      Lihat
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="font-medium text-gray-900 dark:text-white">KP-2022-0045</td>
+                  <td>Ladang Sawit Haram Enterprise</td>
+                  <td class="text-sm text-gray-600 dark:text-gray-400">Kilang Pemprosesan</td>
+                  <td>Sabah</td>
+                  <td class="whitespace-nowrap">01/01/2022</td>
+                  <td class="whitespace-nowrap">31/12/2024</td>
+                  <td>
+                    <span class="badge bg-danger/10 text-danger">Tamat Tempoh</span>
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      class="text-sm text-primary hover:text-primary-light dark:text-accent-light"
+                    >
+                      Lihat
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="font-medium text-gray-900 dark:text-white">KP-2023-0089</td>
+                  <td>Kilang Sawit Murah Sdn Bhd</td>
+                  <td class="text-sm text-gray-600 dark:text-gray-400">Kilang Pemprosesan</td>
+                  <td>Sarawak</td>
+                  <td class="whitespace-nowrap">01/07/2023</td>
+                  <td class="whitespace-nowrap">30/06/2026</td>
+                  <td>
+                    <span class="badge bg-warning/10 text-warning">Digantung</span>
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      class="text-sm text-primary hover:text-primary-light dark:text-accent-light"
+                    >
+                      Lihat
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Pagination -->
+          <div
+            class="mt-4 flex items-center justify-between border-t border-gray-200 pt-4 dark:border-gray-700"
+          >
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              Menunjukkan 1-5 daripada 12 rekod
+            </p>
+            <div class="flex items-center gap-1">
+              <button class="rounded-lg px-3 py-1.5 text-sm text-gray-400" disabled>Sebelum</button>
+              <button class="rounded-lg bg-primary px-3 py-1.5 text-sm text-white">1</button>
+              <button
+                class="rounded-lg px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+              >
+                2
+              </button>
+              <button
+                class="rounded-lg px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+              >
+                3
+              </button>
+              <button
+                class="rounded-lg px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+              >
+                Seterusnya
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

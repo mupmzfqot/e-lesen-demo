@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tetapan Sistem — e-Lesen MPOB</title>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div id="sidebar"></div>
+
+    <div class="lg:pl-64">
+      <div id="header"></div>
+
+      <main class="p-4 lg:p-6">
+        <div class="mb-6">
+          <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Tetapan Sistem</h1>
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+            Konfigurasi umum sistem e-Lesen
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          <!-- General Settings -->
+          <div class="card">
+            <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">Tetapan Umum</h2>
+            <form class="space-y-4" onsubmit="return false">
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div>
+                  <label class="form-label">Nama Sistem</label>
+                  <input type="text" class="form-input" value="e-Lesen MPOB" />
+                </div>
+                <div>
+                  <label class="form-label">Versi</label>
+                  <input
+                    type="text"
+                    class="form-input bg-gray-50 dark:bg-gray-800"
+                    value="2.0.0"
+                    readonly
+                  />
+                </div>
+                <div>
+                  <label class="form-label">Emel Pentadbir</label>
+                  <input type="email" class="form-input" value="admin@mpob.gov.my" />
+                </div>
+                <div>
+                  <label class="form-label">Zon Masa</label>
+                  <select class="form-input">
+                    <option selected>Asia/Kuala_Lumpur (UTC+8)</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label class="form-label">Pengumuman Sistem</label>
+                <textarea
+                  class="form-input"
+                  rows="3"
+                  placeholder="Mesej pengumuman yang dipaparkan di halaman log masuk..."
+                >
+Sistem e-Lesen akan ditutup untuk penyelenggaraan pada 20/03/2026 dari 12:00 AM - 6:00 AM.</textarea
+                >
+              </div>
+              <div
+                class="flex items-center justify-end border-t border-gray-200 pt-4 dark:border-gray-700"
+              >
+                <button type="submit" class="btn-primary">
+                  <i data-lucide="save" class="h-4 w-4"></i>
+                  Simpan
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- KPI Settings -->
+          <div class="card">
+            <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+              Tetapan KPI Pemprosesan
+            </h2>
+            <p class="mb-4 text-sm text-gray-500 dark:text-gray-400">
+              Tempoh sasaran pemprosesan mengikut jenis permohonan (hari bekerja)
+            </p>
+            <div class="overflow-x-auto">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Jenis Permohonan</th>
+                    <th>Sasaran (Hari)</th>
+                    <th>Amaran (Hari)</th>
+                    <th>Kritikal (Hari)</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="font-medium text-gray-900 dark:text-white">Lesen Baharu</td>
+                    <td><input type="number" class="form-input w-20" value="14" /></td>
+                    <td><input type="number" class="form-input w-20" value="10" /></td>
+                    <td><input type="number" class="form-input w-20" value="12" /></td>
+                    <td>
+                      <span
+                        class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                        >Aktif</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="font-medium text-gray-900 dark:text-white">Pembaharuan</td>
+                    <td><input type="number" class="form-input w-20" value="7" /></td>
+                    <td><input type="number" class="form-input w-20" value="5" /></td>
+                    <td><input type="number" class="form-input w-20" value="6" /></td>
+                    <td>
+                      <span
+                        class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                        >Aktif</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="font-medium text-gray-900 dark:text-white">Pindaan</td>
+                    <td><input type="number" class="form-input w-20" value="10" /></td>
+                    <td><input type="number" class="form-input w-20" value="7" /></td>
+                    <td><input type="number" class="form-input w-20" value="9" /></td>
+                    <td>
+                      <span
+                        class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                        >Aktif</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="font-medium text-gray-900 dark:text-white">Pembatalan</td>
+                    <td><input type="number" class="form-input w-20" value="5" /></td>
+                    <td><input type="number" class="form-input w-20" value="3" /></td>
+                    <td><input type="number" class="form-input w-20" value="4" /></td>
+                    <td>
+                      <span
+                        class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                        >Aktif</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="mt-4 flex items-center justify-end border-t border-gray-200 pt-4 dark:border-gray-700"
+            >
+              <button type="button" class="btn-primary">
+                <i data-lucide="save" class="h-4 w-4"></i>
+                Simpan KPI
+              </button>
+            </div>
+          </div>
+
+          <!-- Notification Settings -->
+          <div class="card">
+            <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+              Tetapan Notifikasi
+            </h2>
+            <div class="space-y-4">
+              <label
+                class="flex items-center justify-between rounded-lg border border-gray-200 p-4 dark:border-gray-700"
+              >
+                <div>
+                  <p class="text-sm font-medium text-gray-900 dark:text-white">
+                    Notifikasi emel permohonan baharu
+                  </p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">
+                    Hantar emel kepada pegawai apabila permohonan baharu diterima
+                  </p>
+                </div>
+                <input
+                  type="checkbox"
+                  checked
+                  class="rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                />
+              </label>
+              <label
+                class="flex items-center justify-between rounded-lg border border-gray-200 p-4 dark:border-gray-700"
+              >
+                <div>
+                  <p class="text-sm font-medium text-gray-900 dark:text-white">
+                    Peringatan tamat tempoh lesen
+                  </p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">
+                    Hantar peringatan 90, 60, dan 30 hari sebelum tamat tempoh
+                  </p>
+                </div>
+                <input
+                  type="checkbox"
+                  checked
+                  class="rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                />
+              </label>
+              <label
+                class="flex items-center justify-between rounded-lg border border-gray-200 p-4 dark:border-gray-700"
+              >
+                <div>
+                  <p class="text-sm font-medium text-gray-900 dark:text-white">
+                    Peringatan penyata bulanan
+                  </p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">
+                    Hantar peringatan pada 1hb dan 7hb setiap bulan
+                  </p>
+                </div>
+                <input
+                  type="checkbox"
+                  checked
+                  class="rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                />
+              </label>
+              <label
+                class="flex items-center justify-between rounded-lg border border-gray-200 p-4 dark:border-gray-700"
+              >
+                <div>
+                  <p class="text-sm font-medium text-gray-900 dark:text-white">
+                    Amaran KPI melebihi sasaran
+                  </p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">
+                    Hantar amaran kepada penyelia apabila KPI hampir melebihi sasaran
+                  </p>
+                </div>
+                <input
+                  type="checkbox"
+                  checked
+                  class="rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                />
+              </label>
+              <label
+                class="flex items-center justify-between rounded-lg border border-gray-200 p-4 dark:border-gray-700"
+              >
+                <div>
+                  <p class="text-sm font-medium text-gray-900 dark:text-white">Notifikasi SMS</p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">
+                    Hantar SMS untuk notifikasi kritikal (kos tambahan)
+                  </p>
+                </div>
+                <input
+                  type="checkbox"
+                  class="rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                />
+              </label>
+            </div>
+            <div
+              class="mt-4 flex items-center justify-end border-t border-gray-200 pt-4 dark:border-gray-700"
+            >
+              <button type="button" class="btn-primary">
+                <i data-lucide="save" class="h-4 w-4"></i>
+                Simpan Notifikasi
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

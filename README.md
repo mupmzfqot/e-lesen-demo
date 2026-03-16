@@ -71,12 +71,11 @@ pages/
 └── admin/                      # Pentadbir (System Admin)
     ├── dashboard.html
     ├── pengurusan-pengguna.html # User management
-    ├── tetapan-kpi.html         # KPI settings
     ├── konfigurasi-workflow.html # Workflow configuration
     ├── audit-trail.html         # Audit trail
     ├── senarai-hitam.html       # Blacklist & Watchlist
     ├── laporan-statistik.html   # Reports & Statistics
-    └── tetapan.html             # System settings
+    └── tetapan.html             # System settings (includes KPI config)
 ```
 
 ## Adding a New Page
@@ -88,7 +87,7 @@ pages/
    <link rel="stylesheet" href="/src/styles/main.css" />
    <script type="module" src="/src/main.ts"></script>
    ```
-4. Add a navigation link in `public/partials/sidebar.html`
+4. Add a navigation link in the appropriate `public/partials/sidebar-<role>.html`
 5. Add placeholder content and ensure dark mode support
 6. Test at mobile, tablet, and desktop breakpoints
 7. Run `npm run format && npm run lint && npm run build`
@@ -100,6 +99,8 @@ npm run deploy
 ```
 
 After first deploy, go to your GitHub repository **Settings > Pages** and set the source branch to `gh-pages`.
+
+**Live demo:** [e-lesen.borang.my](https://e-lesen.borang.my)
 
 ## License
 

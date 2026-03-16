@@ -36,28 +36,35 @@ npm run deploy       # Build + deploy to GitHub Pages
   - `pages/pegawai/` — Processing Officer pages
   - `pages/admin/` — System Admin pages
 - **`src/`** — TypeScript, styles, assets
-- **`public/partials/`** — Shared HTML partials (sidebar, header). MUST be in `public/`, NOT `src/` — Vite does not copy runtime-fetched files from `src/` to `dist/`
+- **`public/partials/`** — Shared HTML partials (role-specific sidebars: `sidebar-admin.html`, `sidebar-pegawai.html`, `sidebar-pemohon.html`, `sidebar-pelesen.html`, and `header.html`). MUST be in `public/`, NOT `src/` — Vite does not copy runtime-fetched files from `src/` to `dist/`
 
 ## Layout System
 
 Shared sidebar and header are loaded at runtime via `src/layout.ts`:
 
-1. `public/partials/sidebar.html` → injected into `#sidebar`
+1. Role-specific sidebar loaded based on URL path detection:
+   - `/admin/*` → `public/partials/sidebar-admin.html`
+   - `/pegawai/*` → `public/partials/sidebar-pegawai.html`
+   - `/pemohon/*` → `public/partials/sidebar-pemohon.html`
+   - `/pelesen/*` → `public/partials/sidebar-pelesen.html`
 2. `public/partials/header.html` → injected into `#header`
 3. Lucide icons re-initialized after injection
+4. Each sidebar includes a **role switcher** section for demo navigation between roles
 
 Every page follows this skeleton:
 
 ```html
 <body>
   <div id="sidebar"></div>
-  <div id="app">
+  <div class="lg:pl-64">
     <div id="header"></div>
-    <main><!-- page content --></main>
+    <main class="p-4 lg:p-6"><!-- page content --></main>
   </div>
   <script type="module" src="/src/main.ts"></script>
 </body>
 ```
+
+Public pages (`index.html`, `daftar.html`) do NOT use the sidebar/header layout.
 
 ## Dark Mode
 
@@ -71,7 +78,7 @@ Every page follows this skeleton:
 1. Create HTML file in `pages/<role>/` (e.g., `pages/pegawai/new-page.html`)
 2. Copy layout skeleton from an existing page
 3. Use absolute paths: `/src/styles/main.css`, `/src/main.ts`
-4. Add nav link in `public/partials/sidebar.html`
+4. Add nav link in the appropriate `public/partials/sidebar-<role>.html`
 5. Populate with placeholder data
 6. Use `data-lucide="icon-name"` for icons
 7. Ensure `dark:` classes on all styled elements

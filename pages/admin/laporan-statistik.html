@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laporan & Statistik — e-Lesen MPOB</title>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div id="sidebar"></div>
+
+    <div class="lg:pl-64">
+      <div id="header"></div>
+
+      <main class="p-4 lg:p-6">
+        <div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Laporan & Statistik</h1>
+            <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+              Laporan dan analisis data pelesenan
+            </p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button type="button" class="btn-secondary">
+              <i data-lucide="download" class="h-4 w-4"></i>
+              Eksport PDF
+            </button>
+            <button type="button" class="btn-secondary">
+              <i data-lucide="file-spreadsheet" class="h-4 w-4"></i>
+              Eksport Excel
+            </button>
+          </div>
+        </div>
+
+        <!-- Date Filter -->
+        <div class="card mb-6">
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <div>
+              <label class="form-label">Jenis Laporan</label>
+              <select class="form-input">
+                <option>Ringkasan Permohonan</option>
+                <option>Statistik Lesen Aktif</option>
+                <option>Prestasi KPI</option>
+                <option>Penyata Bulanan</option>
+                <option>Laporan Senarai Hitam</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label">Dari Tarikh</label>
+              <input type="date" class="form-input" value="2026-01-01" />
+            </div>
+            <div>
+              <label class="form-label">Hingga Tarikh</label>
+              <input type="date" class="form-input" value="2026-03-16" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Summary -->
+        <div class="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary-light/20 dark:text-primary-light"
+            >
+              <i data-lucide="file-text" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Jumlah Permohonan</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">342</p>
+              <p class="text-xs text-accent dark:text-accent-light">+12% dari tempoh lepas</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+            >
+              <i data-lucide="check-circle" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Diluluskan</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">278</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">81.3% kadar kelulusan</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-danger/10 text-danger"
+            >
+              <i data-lucide="x-circle" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Ditolak</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">24</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">7.0% kadar penolakan</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-info/10 text-info"
+            >
+              <i data-lucide="clock" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Purata Masa Proses</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-white">8.2</p>
+              <p class="text-xs text-accent dark:text-accent-light">hari — dalam sasaran KPI</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 xl:grid-cols-2">
+          <!-- Chart Placeholder: Trend -->
+          <div class="card">
+            <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+              Trend Permohonan Bulanan
+            </h2>
+            <div
+              class="flex h-64 items-center justify-center rounded-lg border-2 border-dashed border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-800/50"
+            >
+              <div class="text-center text-gray-400 dark:text-gray-500">
+                <i data-lucide="bar-chart-3" class="mx-auto mb-2 h-10 w-10"></i>
+                <p class="text-sm">Carta trend permohonan</p>
+                <p class="text-xs">Jan — Mac 2026</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chart Placeholder: By Category -->
+          <div class="card">
+            <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+              Permohonan Mengikut Kategori
+            </h2>
+            <div
+              class="flex h-64 items-center justify-center rounded-lg border-2 border-dashed border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-800/50"
+            >
+              <div class="text-center text-gray-400 dark:text-gray-500">
+                <i data-lucide="pie-chart" class="mx-auto mb-2 h-10 w-10"></i>
+                <p class="text-sm">Carta pai kategori lesen</p>
+                <p class="text-xs">Kilang, Peniaga, Pengeksport, dll.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- By State -->
+          <div class="card">
+            <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+              Permohonan Mengikut Negeri
+            </h2>
+            <div class="space-y-3">
+              <div>
+                <div class="mb-1 flex items-center justify-between text-sm">
+                  <span class="text-gray-700 dark:text-gray-300">Johor</span>
+                  <span class="font-medium text-gray-900 dark:text-white">58</span>
+                </div>
+                <div class="h-2 rounded-full bg-gray-200 dark:bg-gray-700">
+                  <div class="h-2 rounded-full bg-primary" style="width: 68%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="mb-1 flex items-center justify-between text-sm">
+                  <span class="text-gray-700 dark:text-gray-300">Pahang</span>
+                  <span class="font-medium text-gray-900 dark:text-white">45</span>
+                </div>
+                <div class="h-2 rounded-full bg-gray-200 dark:bg-gray-700">
+                  <div class="h-2 rounded-full bg-primary" style="width: 53%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="mb-1 flex items-center justify-between text-sm">
+                  <span class="text-gray-700 dark:text-gray-300">Sabah</span>
+                  <span class="font-medium text-gray-900 dark:text-white">42</span>
+                </div>
+                <div class="h-2 rounded-full bg-gray-200 dark:bg-gray-700">
+                  <div class="h-2 rounded-full bg-primary" style="width: 49%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="mb-1 flex items-center justify-between text-sm">
+                  <span class="text-gray-700 dark:text-gray-300">Sarawak</span>
+                  <span class="font-medium text-gray-900 dark:text-white">38</span>
+                </div>
+                <div class="h-2 rounded-full bg-gray-200 dark:bg-gray-700">
+                  <div class="h-2 rounded-full bg-primary" style="width: 45%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="mb-1 flex items-center justify-between text-sm">
+                  <span class="text-gray-700 dark:text-gray-300">Perak</span>
+                  <span class="font-medium text-gray-900 dark:text-white">35</span>
+                </div>
+                <div class="h-2 rounded-full bg-gray-200 dark:bg-gray-700">
+                  <div class="h-2 rounded-full bg-primary" style="width: 41%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="mb-1 flex items-center justify-between text-sm">
+                  <span class="text-gray-700 dark:text-gray-300">Lain-lain</span>
+                  <span class="font-medium text-gray-900 dark:text-white">124</span>
+                </div>
+                <div class="h-2 rounded-full bg-gray-200 dark:bg-gray-700">
+                  <div class="h-2 rounded-full bg-gray-400" style="width: 100%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- KPI Performance -->
+          <div class="card">
+            <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+              Prestasi KPI Pegawai
+            </h2>
+            <div class="overflow-x-auto">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Pegawai</th>
+                    <th>Diproses</th>
+                    <th>Purata (Hari)</th>
+                    <th>Dalam KPI</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="font-medium text-gray-900 dark:text-white">Ahmad Razak</td>
+                    <td>45</td>
+                    <td>6.8</td>
+                    <td>
+                      <span
+                        class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                        >95%</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="font-medium text-gray-900 dark:text-white">Siti Aminah</td>
+                    <td>38</td>
+                    <td>7.2</td>
+                    <td>
+                      <span
+                        class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                        >92%</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="font-medium text-gray-900 dark:text-white">Mohd Faizal</td>
+                    <td>41</td>
+                    <td>9.5</td>
+                    <td><span class="badge bg-warning/10 text-warning">78%</span></td>
+                  </tr>
+                  <tr>
+                    <td class="font-medium text-gray-900 dark:text-white">Nurul Huda</td>
+                    <td>32</td>
+                    <td>8.1</td>
+                    <td>
+                      <span
+                        class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                        >88%</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
