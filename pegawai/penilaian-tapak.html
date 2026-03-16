@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penilaian Tapak — e-Lesen MPOB</title>
+    <script type="module" crossorigin src="/assets/main-_heYx2ZT.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-DrX31DVO.css">
+  </head>
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div id="sidebar"></div>
+
+    <div class="lg:pl-64">
+      <div id="header"></div>
+
+      <main class="p-4 lg:p-6">
+        <div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Borang Penilaian Tapak</h1>
+            <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+              LN-2026-0851 — Sawit Jaya Sdn Bhd
+            </p>
+          </div>
+          <span
+            class="badge bg-primary/10 text-primary dark:bg-primary-light/20 dark:text-primary-light"
+            >Dijadualkan: 17/03/2026</span
+          >
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 xl:grid-cols-3">
+          <!-- Assessment Form -->
+          <div class="space-y-6 xl:col-span-2">
+            <!-- Location Info -->
+            <div class="card">
+              <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+                Maklumat Lokasi
+              </h2>
+              <form class="space-y-4" onsubmit="return false">
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  <div>
+                    <label class="form-label">Negeri</label>
+                    <input
+                      type="text"
+                      class="form-input bg-gray-50 dark:bg-gray-800"
+                      value="Pahang"
+                      readonly
+                    />
+                  </div>
+                  <div>
+                    <label class="form-label">Daerah</label>
+                    <input
+                      type="text"
+                      class="form-input bg-gray-50 dark:bg-gray-800"
+                      value="Kuantan"
+                      readonly
+                    />
+                  </div>
+                  <div>
+                    <label class="form-label">Mukim</label>
+                    <input
+                      type="text"
+                      class="form-input bg-gray-50 dark:bg-gray-800"
+                      value="Mukim Kuala Kuantan"
+                      readonly
+                    />
+                  </div>
+                  <div>
+                    <label class="form-label">No. Lot</label>
+                    <input type="text" class="form-input" value="Lot 1234" />
+                  </div>
+                </div>
+
+                <!-- GPS Coordinates -->
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  <div>
+                    <label class="form-label">Latitud</label>
+                    <input type="text" class="form-input" placeholder="3.8126" />
+                  </div>
+                  <div>
+                    <label class="form-label">Longitud</label>
+                    <input type="text" class="form-input" placeholder="103.3256" />
+                  </div>
+                </div>
+
+                <!-- Map Placeholder -->
+                <div
+                  class="flex h-48 items-center justify-center rounded-lg border-2 border-dashed border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-800/50"
+                >
+                  <div class="text-center text-gray-400 dark:text-gray-500">
+                    <i data-lucide="map" class="mx-auto mb-2 h-10 w-10"></i>
+                    <p class="text-sm">Peta lokasi premis</p>
+                    <p class="text-xs">Koordinat akan diplot di sini</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Assessment Checklist -->
+            <div class="card">
+              <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+                Senarai Penilaian
+              </h2>
+              <div class="space-y-4">
+                <div class="rounded-lg border border-gray-200 p-4 dark:border-gray-700">
+                  <h3 class="mb-3 text-sm font-semibold text-gray-900 dark:text-white">
+                    A. Keadaan Fizikal Premis
+                  </h3>
+                  <div class="space-y-2">
+                    <label class="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                      <input
+                        type="checkbox"
+                        class="mt-0.5 rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                      />
+                      Premis wujud dan boleh diakses
+                    </label>
+                    <label class="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                      <input
+                        type="checkbox"
+                        class="mt-0.5 rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                      />
+                      Keadaan bangunan sesuai untuk aktiviti yang dipohon
+                    </label>
+                    <label class="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                      <input
+                        type="checkbox"
+                        class="mt-0.5 rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                      />
+                      Peralatan dan mesin bersesuaian
+                    </label>
+                  </div>
+                </div>
+
+                <div class="rounded-lg border border-gray-200 p-4 dark:border-gray-700">
+                  <h3 class="mb-3 text-sm font-semibold text-gray-900 dark:text-white">
+                    B. Keselamatan &amp; Alam Sekitar
+                  </h3>
+                  <div class="space-y-2">
+                    <label class="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                      <input
+                        type="checkbox"
+                        class="mt-0.5 rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                      />
+                      Sistem pengurusan sisa pepejal yang mencukupi
+                    </label>
+                    <label class="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                      <input
+                        type="checkbox"
+                        class="mt-0.5 rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                      />
+                      Sistem rawatan air effluen berfungsi
+                    </label>
+                    <label class="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                      <input
+                        type="checkbox"
+                        class="mt-0.5 rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                      />
+                      Mematuhi peraturan keselamatan OSHA
+                    </label>
+                  </div>
+                </div>
+
+                <div class="rounded-lg border border-gray-200 p-4 dark:border-gray-700">
+                  <h3 class="mb-3 text-sm font-semibold text-gray-900 dark:text-white">
+                    C. Kapasiti &amp; Operasi
+                  </h3>
+                  <div class="space-y-2">
+                    <label class="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                      <input
+                        type="checkbox"
+                        class="mt-0.5 rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                      />
+                      Daya pemprosesan sesuai dengan permohonan
+                    </label>
+                    <label class="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                      <input
+                        type="checkbox"
+                        class="mt-0.5 rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                      />
+                      Tenaga kerja mencukupi
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Photos & Remarks -->
+            <div class="card">
+              <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+                Gambar &amp; Catatan
+              </h2>
+              <form class="space-y-4" onsubmit="return false">
+                <div>
+                  <label class="form-label">Muat Naik Gambar Premis</label>
+                  <div
+                    class="flex items-center justify-center rounded-lg border-2 border-dashed border-gray-300 px-6 py-8 dark:border-gray-600"
+                  >
+                    <div class="text-center">
+                      <i data-lucide="camera" class="mx-auto mb-2 h-8 w-8 text-gray-400"></i>
+                      <p class="text-sm text-gray-600 dark:text-gray-400">
+                        Seret dan lepas gambar, atau
+                        <button
+                          type="button"
+                          class="font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                        >
+                          pilih fail
+                        </button>
+                      </p>
+                      <p class="mt-1 text-xs text-gray-400">JPG, PNG (maks. 5MB setiap gambar)</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="form-label">Catatan Pegawai Penilai</label>
+                  <textarea
+                    class="form-input"
+                    rows="4"
+                    placeholder="Masukkan pemerhatian dan catatan semasa lawatan tapak..."
+                  ></textarea>
+                </div>
+
+                <div>
+                  <label class="form-label">Syor</label>
+                  <select class="form-input">
+                    <option value="">-- Pilih syor --</option>
+                    <option>Lulus — premis memenuhi syarat</option>
+                    <option>Lulus bersyarat — perlu penambahbaikan</option>
+                    <option>Tidak lulus — premis tidak memenuhi syarat</option>
+                  </select>
+                </div>
+
+                <div
+                  class="flex items-center justify-end gap-3 border-t border-gray-200 pt-6 dark:border-gray-700"
+                >
+                  <button type="button" class="btn-secondary">
+                    <i data-lucide="save" class="h-4 w-4"></i>
+                    Simpan Draf
+                  </button>
+                  <button type="submit" class="btn-primary">
+                    <i data-lucide="send" class="h-4 w-4"></i>
+                    Hantar Laporan
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Sidebar Info -->
+          <div class="space-y-6">
+            <div class="card">
+              <h3
+                class="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400"
+              >
+                Maklumat Lawatan
+              </h3>
+              <dl class="space-y-3">
+                <div>
+                  <dt class="text-xs text-gray-500 dark:text-gray-400">Pegawai Penilai</dt>
+                  <dd class="text-sm font-medium text-gray-900 dark:text-white">
+                    Ahmad Razak bin Mohd Noor
+                  </dd>
+                </div>
+                <div>
+                  <dt class="text-xs text-gray-500 dark:text-gray-400">Tarikh Lawatan</dt>
+                  <dd class="text-sm text-gray-900 dark:text-white">17/03/2026</dd>
+                </div>
+                <div>
+                  <dt class="text-xs text-gray-500 dark:text-gray-400">Masa</dt>
+                  <dd class="text-sm text-gray-900 dark:text-white">10:00 AM — 12:00 PM</dd>
+                </div>
+                <div>
+                  <dt class="text-xs text-gray-500 dark:text-gray-400">Alamat</dt>
+                  <dd class="text-sm text-gray-900 dark:text-white">
+                    No. 12, Jalan Industri 3, Kawasan Perindustrian Gebeng, 26080 Kuantan, Pahang
+                  </dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="card">
+              <h3
+                class="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400"
+              >
+                Pengesahan Koordinat
+              </h3>
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-600 dark:text-gray-400">GPS diaktifkan</span>
+                  <span
+                    class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                    >Ya</span
+                  >
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-600 dark:text-gray-400">Koordinat disahkan</span>
+                  <span class="badge bg-warning/10 text-warning">Belum</span>
+                </div>
+                <button type="button" class="btn-secondary w-full">
+                  <i data-lucide="map-pin" class="h-4 w-4"></i>
+                  Sahkan Koordinat Semasa
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+  </body>
+</html>

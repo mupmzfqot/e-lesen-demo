@@ -13,8 +13,8 @@
 
   <!-- Navigation -->
   <nav class="flex-1 overflow-y-auto px-3 py-4">
-    <!-- Utama -->
-    <p class="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">Utama</p>
+    <!-- Pentadbir (Admin) -->
+    <p class="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">Pentadbir</p>
     <ul class="mb-4 space-y-1">
       <li>
         <a href="/admin/dashboard.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
@@ -24,9 +24,44 @@
       </li>
     </ul>
 
-    <!-- Pelesenan -->
-    <p class="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">Pelesenan</p>
+    <!-- Pegawai (Officer) -->
+    <p class="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">Pegawai</p>
     <ul class="mb-4 space-y-1">
+      <li>
+        <a href="/pegawai/dashboard.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+          <i data-lucide="layout-dashboard" class="h-4 w-4"></i>
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="/pegawai/senarai-permohonan.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+          <i data-lucide="list" class="h-4 w-4"></i>
+          Senarai Permohonan
+        </a>
+      </li>
+      <li>
+        <a href="/pegawai/semakan-permohonan.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+          <i data-lucide="clipboard-check" class="h-4 w-4"></i>
+          Semakan Permohonan
+        </a>
+      </li>
+      <li>
+        <a href="/pegawai/penilaian-tapak.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+          <i data-lucide="map-pin" class="h-4 w-4"></i>
+          Penilaian Tapak
+        </a>
+      </li>
+    </ul>
+
+    <!-- Pemohon (Applicant) -->
+    <p class="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">Pemohon</p>
+    <ul class="mb-4 space-y-1">
+      <li>
+        <a href="/pemohon/dashboard.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+          <i data-lucide="layout-dashboard" class="h-4 w-4"></i>
+          Dashboard
+        </a>
+      </li>
       <li>
         <a href="/pemohon/permohonan-baharu.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
           <i data-lucide="file-plus" class="h-4 w-4"></i>
@@ -36,7 +71,13 @@
       <li>
         <a href="/pemohon/pembaharuan.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
           <i data-lucide="refresh-cw" class="h-4 w-4"></i>
-          Pembaharuan Lesen
+          Pembaharuan
+        </a>
+      </li>
+      <li>
+        <a href="/pemohon/pindaan.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+          <i data-lucide="edit" class="h-4 w-4"></i>
+          Pindaan
         </a>
       </li>
       <li>
@@ -45,55 +86,51 @@
           Status Permohonan
         </a>
       </li>
-    </ul>
-
-    <!-- Pemantauan -->
-    <p class="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">Pemantauan</p>
-    <ul class="mb-4 space-y-1">
       <li>
-        <a href="/pegawai/e-pemantauan.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
-          <i data-lucide="activity" class="h-4 w-4"></i>
-          e-Pemantauan
-        </a>
-      </li>
-      <li>
-        <a href="/pegawai/carian.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
-          <i data-lucide="search" class="h-4 w-4"></i>
-          Carian
+        <a href="/pemohon/profil.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+          <i data-lucide="user" class="h-4 w-4"></i>
+          Profil
         </a>
       </li>
     </ul>
 
-    <!-- Laporan -->
-    <p class="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">Laporan</p>
+    <!-- Pemegang Lesen (License Holder) -->
+    <p class="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">Pemegang Lesen</p>
     <ul class="mb-4 space-y-1">
       <li>
-        <a href="/pegawai/laporan.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
-          <i data-lucide="bar-chart-3" class="h-4 w-4"></i>
-          Laporan & Statistik
-        </a>
-      </li>
-    </ul>
-
-    <!-- Pentadbiran -->
-    <p class="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">Pentadbiran</p>
-    <ul class="mb-4 space-y-1">
-      <li>
-        <a href="/admin/pengurusan-pengguna.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
-          <i data-lucide="users" class="h-4 w-4"></i>
-          Pengurusan Pengguna
+        <a href="/pelesen/dashboard.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+          <i data-lucide="layout-dashboard" class="h-4 w-4"></i>
+          Dashboard
         </a>
       </li>
       <li>
-        <a href="/admin/audit-trail.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
-          <i data-lucide="shield-check" class="h-4 w-4"></i>
-          Audit Trail
+        <a href="/pelesen/senarai-lesen.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+          <i data-lucide="file-check" class="h-4 w-4"></i>
+          Senarai Lesen
         </a>
       </li>
       <li>
-        <a href="/admin/tetapan.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
-          <i data-lucide="settings" class="h-4 w-4"></i>
-          Tetapan
+        <a href="/pelesen/penyata-bulanan.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+          <i data-lucide="file-text" class="h-4 w-4"></i>
+          Penyata Bulanan
+        </a>
+      </li>
+      <li>
+        <a href="/pelesen/pembaharuan.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+          <i data-lucide="refresh-cw" class="h-4 w-4"></i>
+          Pembaharuan Lesen
+        </a>
+      </li>
+      <li>
+        <a href="/pelesen/pindaan.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+          <i data-lucide="edit" class="h-4 w-4"></i>
+          Pindaan Lesen
+        </a>
+      </li>
+      <li>
+        <a href="/pelesen/profil.html" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800">
+          <i data-lucide="user" class="h-4 w-4"></i>
+          Profil
         </a>
       </li>
     </ul>

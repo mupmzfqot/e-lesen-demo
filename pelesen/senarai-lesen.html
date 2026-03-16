@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Senarai Lesen — e-Lesen MPOB</title>
+    <script type="module" crossorigin src="/assets/main-_heYx2ZT.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-DrX31DVO.css">
+  </head>
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div id="sidebar"></div>
+
+    <div class="lg:pl-64">
+      <div id="header"></div>
+
+      <main class="p-4 lg:p-6">
+        <div class="mb-6">
+          <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Senarai Lesen</h1>
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+            Semua lesen yang didaftarkan di bawah syarikat anda
+          </p>
+        </div>
+
+        <!-- Filters -->
+        <div class="card mb-6">
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <label class="form-label">Carian</label>
+              <div class="relative">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+                  <i data-lucide="search" class="h-4 w-4"></i>
+                </span>
+                <input type="text" class="form-input pl-10" placeholder="No. lesen / aktiviti..." />
+              </div>
+            </div>
+            <div>
+              <label class="form-label">Kategori</label>
+              <select class="form-input">
+                <option value="">Semua</option>
+                <option>Kilang Pemprosesan</option>
+                <option>Peniaga</option>
+                <option>Pengeksport</option>
+                <option>Pengimport</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label">Status</label>
+              <select class="form-input">
+                <option value="">Semua</option>
+                <option>Aktif</option>
+                <option>Akan Tamat</option>
+                <option>Tamat Tempoh</option>
+                <option>Digantung</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label">Tahun</label>
+              <select class="form-input">
+                <option>2026</option>
+                <option>2025</option>
+                <option>2024</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="mb-4 flex flex-wrap gap-2">
+          <span class="badge bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300"
+            >Semua: 4</span
+          >
+          <span
+            class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+            >Aktif: 3</span
+          >
+          <span class="badge bg-warning/10 text-warning">Akan Tamat: 1</span>
+        </div>
+
+        <!-- License Table -->
+        <div class="card">
+          <div class="overflow-x-auto">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>No. Lesen</th>
+                  <th>Kategori</th>
+                  <th>Aktiviti</th>
+                  <th>Tarikh Mula</th>
+                  <th>Tarikh Tamat</th>
+                  <th>Status</th>
+                  <th>Tindakan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    KPB-2024-1234
+                  </td>
+                  <td>Kilang Pemprosesan</td>
+                  <td>Memproses kelapa sawit</td>
+                  <td class="whitespace-nowrap">15/06/2024</td>
+                  <td class="whitespace-nowrap">15/06/2026</td>
+                  <td><span class="badge bg-warning/10 text-warning">Akan Tamat</span></td>
+                  <td>
+                    <div class="flex items-center gap-2">
+                      <button
+                        type="button"
+                        class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                      >
+                        Lihat
+                      </button>
+                      <span class="text-gray-300 dark:text-gray-600">|</span>
+                      <a
+                        href="/pelesen/pembaharuan.html"
+                        class="text-sm font-medium text-warning hover:underline"
+                        >Baharui</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    KPB-2024-1235
+                  </td>
+                  <td>Peniaga</td>
+                  <td>Jual beli minyak sawit mentah</td>
+                  <td class="whitespace-nowrap">01/01/2026</td>
+                  <td class="whitespace-nowrap">31/12/2026</td>
+                  <td>
+                    <span
+                      class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                      >Aktif</span
+                    >
+                  </td>
+                  <td>
+                    <div class="flex items-center gap-2">
+                      <button
+                        type="button"
+                        class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                      >
+                        Lihat
+                      </button>
+                      <span class="text-gray-300 dark:text-gray-600">|</span>
+                      <a
+                        href="/pelesen/pindaan.html"
+                        class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                        >Pinda</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    KPB-2024-1236
+                  </td>
+                  <td>Pengeksport</td>
+                  <td>Eksport minyak isirung sawit</td>
+                  <td class="whitespace-nowrap">01/01/2026</td>
+                  <td class="whitespace-nowrap">31/12/2026</td>
+                  <td>
+                    <span
+                      class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                      >Aktif</span
+                    >
+                  </td>
+                  <td>
+                    <div class="flex items-center gap-2">
+                      <button
+                        type="button"
+                        class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                      >
+                        Lihat
+                      </button>
+                      <span class="text-gray-300 dark:text-gray-600">|</span>
+                      <a
+                        href="/pelesen/pindaan.html"
+                        class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                        >Pinda</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                    KPB-2023-0987
+                  </td>
+                  <td>Pengimport</td>
+                  <td>Import baja kelapa sawit</td>
+                  <td class="whitespace-nowrap">01/10/2023</td>
+                  <td class="whitespace-nowrap">30/09/2026</td>
+                  <td>
+                    <span
+                      class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                      >Aktif</span
+                    >
+                  </td>
+                  <td>
+                    <div class="flex items-center gap-2">
+                      <button
+                        type="button"
+                        class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                      >
+                        Lihat
+                      </button>
+                      <span class="text-gray-300 dark:text-gray-600">|</span>
+                      <a
+                        href="/pelesen/pindaan.html"
+                        class="text-sm font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                        >Pinda</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- License Detail Modal (inline card, shown as if a license was clicked) -->
+        <div class="card mt-6">
+          <div class="mb-4 flex items-center justify-between">
+            <h2 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Butiran Lesen — KPB-2024-1234
+            </h2>
+            <span class="badge bg-warning/10 text-warning">Akan Tamat</span>
+          </div>
+          <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+            <div class="space-y-3">
+              <div>
+                <p class="text-xs text-gray-500 dark:text-gray-400">No. Lesen</p>
+                <p class="text-sm font-medium text-gray-900 dark:text-white">KPB-2024-1234</p>
+              </div>
+              <div>
+                <p class="text-xs text-gray-500 dark:text-gray-400">Kategori</p>
+                <p class="text-sm text-gray-900 dark:text-white">Kilang Pemprosesan</p>
+              </div>
+              <div>
+                <p class="text-xs text-gray-500 dark:text-gray-400">Aktiviti Berlesen</p>
+                <p class="text-sm text-gray-900 dark:text-white">Memproses kelapa sawit</p>
+              </div>
+              <div>
+                <p class="text-xs text-gray-500 dark:text-gray-400">Daya Pemprosesan</p>
+                <p class="text-sm text-gray-900 dark:text-white">60 tan metrik/jam</p>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <div>
+                <p class="text-xs text-gray-500 dark:text-gray-400">Pemegang Lesen</p>
+                <p class="text-sm font-medium text-gray-900 dark:text-white">
+                  Palm Oil Industries Bhd
+                </p>
+              </div>
+              <div>
+                <p class="text-xs text-gray-500 dark:text-gray-400">Alamat Premis</p>
+                <p class="text-sm text-gray-900 dark:text-white">
+                  Lot 456, Jalan Perindustrian, Kawasan Perindustrian Teluk Kalong, 24000 Kemaman,
+                  Terengganu
+                </p>
+              </div>
+              <div>
+                <p class="text-xs text-gray-500 dark:text-gray-400">Tempoh Sah</p>
+                <p class="text-sm text-gray-900 dark:text-white">15/06/2024 — 15/06/2026</p>
+              </div>
+              <div>
+                <p class="text-xs text-gray-500 dark:text-gray-400">Kod QR</p>
+                <div
+                  class="flex h-20 w-20 items-center justify-center rounded-lg border border-gray-200 bg-white dark:border-gray-600"
+                >
+                  <i data-lucide="qr-code" class="h-12 w-12 text-gray-400"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-4 flex items-center gap-3 border-t border-gray-200 pt-4 dark:border-gray-700"
+          >
+            <button type="button" class="btn-secondary">
+              <i data-lucide="download" class="h-4 w-4"></i>
+              Muat Turun Lesen
+            </button>
+            <a href="/pelesen/pembaharuan.html" class="btn-primary">
+              <i data-lucide="refresh-cw" class="h-4 w-4"></i>
+              Mohon Pembaharuan
+            </a>
+          </div>
+        </div>
+      </main>
+    </div>
+
+  </body>
+</html>

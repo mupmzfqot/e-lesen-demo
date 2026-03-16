@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penyata Bulanan — e-Lesen MPOB</title>
+    <script type="module" crossorigin src="/assets/main-_heYx2ZT.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-DrX31DVO.css">
+  </head>
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div id="sidebar"></div>
+
+    <div class="lg:pl-64">
+      <div id="header"></div>
+
+      <main class="p-4 lg:p-6">
+        <div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Penyata Bulanan</h1>
+            <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+              Hantar penyata bulanan (Borang MB4 / KB4) untuk semua lesen aktif
+            </p>
+          </div>
+          <span class="badge bg-info/10 text-info">Tarikh Akhir: 10/04/2026</span>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 xl:grid-cols-3">
+          <!-- Form -->
+          <div class="space-y-6 xl:col-span-2">
+            <!-- Select License -->
+            <div class="card">
+              <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">Pilih Lesen</h2>
+              <div class="space-y-3">
+                <label
+                  class="flex cursor-pointer items-start gap-3 rounded-lg border border-primary/30 bg-primary/5 p-4 dark:border-primary-light/30 dark:bg-primary-light/10"
+                >
+                  <input
+                    type="radio"
+                    name="license"
+                    checked
+                    class="mt-1 text-primary focus:ring-primary"
+                  />
+                  <div>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">
+                      KPB-2024-1234 — Kilang Pemprosesan
+                    </p>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">
+                      Borang MB4 — Memproses kelapa sawit
+                    </p>
+                  </div>
+                </label>
+                <label
+                  class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-200 p-4 hover:border-gray-300 dark:border-gray-700 dark:hover:border-gray-600"
+                >
+                  <input type="radio" name="license" class="mt-1 text-primary focus:ring-primary" />
+                  <div>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">
+                      KPB-2024-1235 — Peniaga
+                    </p>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">
+                      Borang KB4 — Jual beli minyak sawit mentah
+                    </p>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- MB4 Form -->
+            <div class="card">
+              <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+                Borang MB4 — Mac 2026
+              </h2>
+              <p class="mb-4 text-sm text-gray-500 dark:text-gray-400">
+                Penyata pembelian dan pemprosesan buah kelapa sawit
+              </p>
+              <form class="space-y-6" onsubmit="return false">
+                <!-- Section A: Penerimaan BTS -->
+                <div class="rounded-lg border border-gray-200 p-4 dark:border-gray-700">
+                  <h3 class="mb-3 text-sm font-semibold text-gray-900 dark:text-white">
+                    A. Penerimaan Buah Tandan Segar (BTS)
+                  </h3>
+                  <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                    <div>
+                      <label class="form-label">Jumlah BTS Diterima (MT)</label>
+                      <input type="number" class="form-input" placeholder="0.00" />
+                    </div>
+                    <div>
+                      <label class="form-label">Daripada Ladang Sendiri (MT)</label>
+                      <input type="number" class="form-input" placeholder="0.00" />
+                    </div>
+                    <div>
+                      <label class="form-label">Daripada Pekebun Kecil (MT)</label>
+                      <input type="number" class="form-input" placeholder="0.00" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Section B: Pengeluaran -->
+                <div class="rounded-lg border border-gray-200 p-4 dark:border-gray-700">
+                  <h3 class="mb-3 text-sm font-semibold text-gray-900 dark:text-white">
+                    B. Pengeluaran
+                  </h3>
+                  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <div>
+                      <label class="form-label">Minyak Sawit Mentah / CPO (MT)</label>
+                      <input type="number" class="form-input" placeholder="0.00" />
+                    </div>
+                    <div>
+                      <label class="form-label">Isirung Sawit / PK (MT)</label>
+                      <input type="number" class="form-input" placeholder="0.00" />
+                    </div>
+                    <div>
+                      <label class="form-label">Kadar Perahan Minyak / OER (%)</label>
+                      <input type="number" class="form-input" placeholder="0.00" step="0.01" />
+                    </div>
+                    <div>
+                      <label class="form-label">Kadar Perahan Isirung / KER (%)</label>
+                      <input type="number" class="form-input" placeholder="0.00" step="0.01" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Section C: Stok -->
+                <div class="rounded-lg border border-gray-200 p-4 dark:border-gray-700">
+                  <h3 class="mb-3 text-sm font-semibold text-gray-900 dark:text-white">
+                    C. Stok Akhir Bulan
+                  </h3>
+                  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <div>
+                      <label class="form-label">Stok CPO (MT)</label>
+                      <input type="number" class="form-input" placeholder="0.00" />
+                    </div>
+                    <div>
+                      <label class="form-label">Stok PK (MT)</label>
+                      <input type="number" class="form-input" placeholder="0.00" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Section D: Jualan -->
+                <div class="rounded-lg border border-gray-200 p-4 dark:border-gray-700">
+                  <h3 class="mb-3 text-sm font-semibold text-gray-900 dark:text-white">
+                    D. Jualan
+                  </h3>
+                  <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                    <div>
+                      <label class="form-label">Jualan CPO (MT)</label>
+                      <input type="number" class="form-input" placeholder="0.00" />
+                    </div>
+                    <div>
+                      <label class="form-label">Harga Purata CPO (RM/MT)</label>
+                      <input type="number" class="form-input" placeholder="0.00" />
+                    </div>
+                    <div>
+                      <label class="form-label">Jumlah Nilai (RM)</label>
+                      <input
+                        type="number"
+                        class="form-input bg-gray-50 dark:bg-gray-800"
+                        placeholder="0.00"
+                        readonly
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Remarks -->
+                <div>
+                  <label class="form-label">Catatan</label>
+                  <textarea
+                    class="form-input"
+                    rows="3"
+                    placeholder="Sebarang catatan tambahan..."
+                  ></textarea>
+                </div>
+
+                <!-- Actions -->
+                <div
+                  class="flex items-center justify-end gap-3 border-t border-gray-200 pt-6 dark:border-gray-700"
+                >
+                  <button type="button" class="btn-secondary">
+                    <i data-lucide="save" class="h-4 w-4"></i>
+                    Simpan Draf
+                  </button>
+                  <button type="submit" class="btn-primary">
+                    <i data-lucide="send" class="h-4 w-4"></i>
+                    Hantar Penyata
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="space-y-6">
+            <!-- Submission Status -->
+            <div class="card">
+              <h3
+                class="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400"
+              >
+                Status Penghantaran
+              </h3>
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-600 dark:text-gray-400">Bulan Laporan</span>
+                  <span class="text-sm font-medium text-gray-900 dark:text-white">Mac 2026</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-600 dark:text-gray-400">Tarikh Akhir</span>
+                  <span class="text-sm font-medium text-danger">10/04/2026</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-600 dark:text-gray-400">Status</span>
+                  <span class="badge bg-warning/10 text-warning">Belum Hantar</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-600 dark:text-gray-400">Baki Hari</span>
+                  <span class="text-sm font-medium text-warning">25 hari</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- History -->
+            <div class="card">
+              <h3
+                class="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400"
+              >
+                Sejarah Penyata
+              </h3>
+              <div class="space-y-3">
+                <div
+                  class="flex items-center justify-between rounded-lg border border-gray-200 p-3 dark:border-gray-700"
+                >
+                  <div>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">Feb 2026</p>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Dihantar 08/03/2026</p>
+                  </div>
+                  <span
+                    class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                    >Diterima</span
+                  >
+                </div>
+                <div
+                  class="flex items-center justify-between rounded-lg border border-gray-200 p-3 dark:border-gray-700"
+                >
+                  <div>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">Jan 2026</p>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Dihantar 07/02/2026</p>
+                  </div>
+                  <span
+                    class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                    >Diterima</span
+                  >
+                </div>
+                <div
+                  class="flex items-center justify-between rounded-lg border border-gray-200 p-3 dark:border-gray-700"
+                >
+                  <div>
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">Dis 2025</p>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Dihantar 09/01/2026</p>
+                  </div>
+                  <span
+                    class="badge bg-accent/10 text-accent dark:bg-accent-light/20 dark:text-accent-light"
+                    >Diterima</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Help -->
+            <div class="card">
+              <h3
+                class="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400"
+              >
+                Panduan
+              </h3>
+              <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="info" class="mt-0.5 h-4 w-4 shrink-0 text-info"></i>
+                  Penyata perlu dihantar sebelum 10hb bulan berikutnya
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="info" class="mt-0.5 h-4 w-4 shrink-0 text-info"></i>
+                  Semua angka dalam unit Tan Metrik (MT)
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="info" class="mt-0.5 h-4 w-4 shrink-0 text-info"></i>
+                  Penghantaran lewat boleh dikenakan kompaun
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+  </body>
+</html>

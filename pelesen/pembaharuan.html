@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pembaharuan Lesen — e-Lesen MPOB</title>
+    <script type="module" crossorigin src="/assets/main-_heYx2ZT.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-DrX31DVO.css">
+  </head>
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div id="sidebar"></div>
+
+    <div class="lg:pl-64">
+      <div id="header"></div>
+
+      <main class="p-4 lg:p-6">
+        <div class="mb-6">
+          <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Pembaharuan Lesen</h1>
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+            Mohon pembaharuan untuk lesen yang akan atau telah tamat tempoh
+          </p>
+        </div>
+
+        <!-- Expiry Warning -->
+        <div
+          class="mb-6 rounded-lg border border-warning/20 bg-warning/5 p-4 dark:border-warning/30 dark:bg-warning/10"
+        >
+          <div class="flex items-start gap-3">
+            <i data-lucide="alert-triangle" class="mt-0.5 h-5 w-5 shrink-0 text-warning"></i>
+            <div>
+              <p class="font-medium text-warning">Lesen KPB-2024-1234 akan tamat pada 15/06/2026</p>
+              <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                Sila kemukakan permohonan pembaharuan sekurang-kurangnya 90 hari sebelum tarikh
+                tamat tempoh untuk mengelakkan gangguan operasi.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 xl:grid-cols-3">
+          <!-- Form -->
+          <div class="space-y-6 xl:col-span-2">
+            <!-- Current License Info -->
+            <div class="card">
+              <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+                Maklumat Lesen Semasa
+              </h2>
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">No. Lesen</p>
+                  <p class="text-sm font-medium text-gray-900 dark:text-white">KPB-2024-1234</p>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">Kategori</p>
+                  <p class="text-sm text-gray-900 dark:text-white">Kilang Pemprosesan</p>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">Aktiviti</p>
+                  <p class="text-sm text-gray-900 dark:text-white">Memproses kelapa sawit</p>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">Tarikh Tamat</p>
+                  <p class="text-sm font-medium text-warning">15/06/2026</p>
+                </div>
+                <div class="sm:col-span-2">
+                  <p class="text-xs text-gray-500 dark:text-gray-400">Alamat Premis</p>
+                  <p class="text-sm text-gray-900 dark:text-white">
+                    Lot 456, Jalan Perindustrian, Kawasan Perindustrian Teluk Kalong, 24000 Kemaman,
+                    Terengganu
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Renewal Form -->
+            <div class="card">
+              <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+                Borang Pembaharuan
+              </h2>
+              <form class="space-y-4" onsubmit="return false">
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  <div>
+                    <label class="form-label">Tempoh Pembaharuan</label>
+                    <select class="form-input">
+                      <option>1 Tahun</option>
+                      <option>2 Tahun</option>
+                      <option>3 Tahun</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="form-label">Daya Pemprosesan (MT/jam)</label>
+                    <input type="number" class="form-input" value="60" />
+                  </div>
+                </div>
+
+                <div>
+                  <label class="form-label">Adakah terdapat perubahan kepada premis?</label>
+                  <select class="form-input">
+                    <option>Tidak — tiada perubahan</option>
+                    <option>Ya — terdapat perubahan</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="form-label">Catatan Tambahan</label>
+                  <textarea
+                    class="form-input"
+                    rows="3"
+                    placeholder="Sebarang maklumat tambahan untuk pegawai..."
+                  ></textarea>
+                </div>
+
+                <!-- Document Upload -->
+                <div>
+                  <label class="form-label">Dokumen Sokongan</label>
+                  <div class="space-y-2">
+                    <div
+                      class="flex items-center justify-between rounded-lg border border-gray-200 p-3 dark:border-gray-700"
+                    >
+                      <div class="flex items-center gap-3">
+                        <i data-lucide="file-text" class="h-5 w-5 text-accent"></i>
+                        <div>
+                          <p class="text-sm text-gray-900 dark:text-white">Sijil SSM (Terkini)</p>
+                          <p class="text-xs text-accent dark:text-accent-light">Dimuat naik</p>
+                        </div>
+                      </div>
+                      <button type="button" class="text-xs text-danger hover:underline">
+                        Padam
+                      </button>
+                    </div>
+                    <div
+                      class="flex items-center justify-between rounded-lg border border-gray-200 p-3 dark:border-gray-700"
+                    >
+                      <div class="flex items-center gap-3">
+                        <i data-lucide="file-text" class="h-5 w-5 text-accent"></i>
+                        <div>
+                          <p class="text-sm text-gray-900 dark:text-white">
+                            Laporan Pematuhan Alam Sekitar
+                          </p>
+                          <p class="text-xs text-accent dark:text-accent-light">Dimuat naik</p>
+                        </div>
+                      </div>
+                      <button type="button" class="text-xs text-danger hover:underline">
+                        Padam
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="mt-3 flex items-center justify-center rounded-lg border-2 border-dashed border-gray-300 px-6 py-6 dark:border-gray-600"
+                  >
+                    <div class="text-center">
+                      <i data-lucide="upload" class="mx-auto mb-2 h-8 w-8 text-gray-400"></i>
+                      <p class="text-sm text-gray-600 dark:text-gray-400">
+                        Seret dan lepas fail, atau
+                        <button
+                          type="button"
+                          class="font-medium text-primary hover:text-primary-light dark:text-accent-light"
+                        >
+                          pilih fail
+                        </button>
+                      </p>
+                      <p class="mt-1 text-xs text-gray-400">PDF, JPG, PNG (maks. 10MB)</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Declaration -->
+                <div
+                  class="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800/50"
+                >
+                  <label class="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                    <input
+                      type="checkbox"
+                      class="mt-0.5 rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600"
+                    />
+                    Saya mengesahkan bahawa semua maklumat yang diberikan adalah benar dan tepat.
+                    Saya memahami bahawa sebarang maklumat palsu boleh menyebabkan pembatalan lesen.
+                  </label>
+                </div>
+
+                <div
+                  class="flex items-center justify-end gap-3 border-t border-gray-200 pt-6 dark:border-gray-700"
+                >
+                  <button type="button" class="btn-secondary">
+                    <i data-lucide="save" class="h-4 w-4"></i>
+                    Simpan Draf
+                  </button>
+                  <button type="submit" class="btn-primary">
+                    <i data-lucide="send" class="h-4 w-4"></i>
+                    Hantar Permohonan
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="space-y-6">
+            <!-- Fee Info -->
+            <div class="card">
+              <h3
+                class="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400"
+              >
+                Maklumat Bayaran
+              </h3>
+              <dl class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <dt class="text-sm text-gray-600 dark:text-gray-400">Yuran Pembaharuan</dt>
+                  <dd class="text-sm font-medium text-gray-900 dark:text-white">RM 500.00</dd>
+                </div>
+                <div class="flex items-center justify-between">
+                  <dt class="text-sm text-gray-600 dark:text-gray-400">Caj Pemprosesan</dt>
+                  <dd class="text-sm font-medium text-gray-900 dark:text-white">RM 50.00</dd>
+                </div>
+                <div
+                  class="flex items-center justify-between border-t border-gray-200 pt-3 dark:border-gray-700"
+                >
+                  <dt class="text-sm font-semibold text-gray-900 dark:text-white">Jumlah</dt>
+                  <dd class="text-sm font-bold text-gray-900 dark:text-white">RM 550.00</dd>
+                </div>
+              </dl>
+              <button type="button" class="btn-accent mt-4 w-full">
+                <i data-lucide="credit-card" class="h-4 w-4"></i>
+                Bayar Sekarang
+              </button>
+            </div>
+
+            <!-- Requirements -->
+            <div class="card">
+              <h3
+                class="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400"
+              >
+                Dokumen Diperlukan
+              </h3>
+              <ul class="space-y-2">
+                <li class="flex items-center gap-2 text-sm">
+                  <i data-lucide="check-circle" class="h-4 w-4 text-accent"></i>
+                  <span class="text-gray-700 dark:text-gray-300">Sijil SSM terkini</span>
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <i data-lucide="check-circle" class="h-4 w-4 text-accent"></i>
+                  <span class="text-gray-700 dark:text-gray-300"
+                    >Laporan pematuhan alam sekitar</span
+                  >
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <i data-lucide="circle" class="h-4 w-4 text-gray-300 dark:text-gray-600"></i>
+                  <span class="text-gray-700 dark:text-gray-300">Penyata kewangan terkini</span>
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <i data-lucide="circle" class="h-4 w-4 text-gray-300 dark:text-gray-600"></i>
+                  <span class="text-gray-700 dark:text-gray-300">Resit bayaran cukai taksiran</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Timeline -->
+            <div class="card">
+              <h3
+                class="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400"
+              >
+                Proses Pembaharuan
+              </h3>
+              <div class="space-y-3 text-sm">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-info text-white"
+                  >
+                    <span class="text-xs font-bold">1</span>
+                  </div>
+                  <span class="font-medium text-info">Isi borang &amp; muat naik dokumen</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700"
+                  >
+                    <span class="text-xs font-bold text-gray-500">2</span>
+                  </div>
+                  <span class="text-gray-500 dark:text-gray-400">Bayaran yuran pembaharuan</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700"
+                  >
+                    <span class="text-xs font-bold text-gray-500">3</span>
+                  </div>
+                  <span class="text-gray-500 dark:text-gray-400">Semakan oleh pegawai</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700"
+                  >
+                    <span class="text-xs font-bold text-gray-500">4</span>
+                  </div>
+                  <span class="text-gray-500 dark:text-gray-400"
+                    >Kelulusan &amp; cetakan lesen baharu</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+  </body>
+</html>
